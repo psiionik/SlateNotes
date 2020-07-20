@@ -241,17 +241,21 @@
         * 2 mandatory fields:   
             1. Host - Domain name to target
             2. Connection - Whether to keep connection open or closed after
-        * Ex. <pre>Host: flaviocopes.com 
-            Connection: close</pre>
+        * Ex. 
+```
+Host: flaviocopes.com 
+Connection: close
+```
     3. The request body
         * Contains data in the form of JSON
         * Ex. 
-        <pre> {
-            data: {
-                some_text
-            }
-        }
-        </pre>
+``` 
+{
+    data: {
+        some_text
+    }
+}
+```
 
 ### The response
 
