@@ -1,6 +1,5 @@
 # CSS Basics
 
-[This is a test link](Level4/Functions.md)
 <!-- TOC -->
 
 - [CSS Basics](#css-basics)
@@ -112,7 +111,7 @@ p {
 #id-name {
     rules...
 }
-``` 
+```
 
 ### Combining Selectors
 
@@ -434,7 +433,7 @@ div {
 
 /* #name { display: block; } */
 
-name {
+#name {
 	display: block; /*
 	color: red;
 	*/
@@ -442,8 +441,3 @@ name {
 ```
 * Helps since this allowed you to comment out multiple lines until ```*/``` is reached
 * CSS doesn't have inline comments so only block comments can be used
-
-```python
-def testingThis():
-  print("hello")
-```

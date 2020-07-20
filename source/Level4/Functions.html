@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.18.1/lib/index.min.js">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath@0.6.5/css/texmath.css">
+<link rel="stylesheet" href="https://gitcdn.xyz/repo/goessner/mdmath/master/css/vscode-texmath.css">
+
+</head>
+<body class="markdown-body">
+<h1 id="functions-2" data-line="0" class="code-line">Functions</h1>
+<!-- TOC -->
+<ul>
+<li data-line="4" class="code-line"><a href="#functions" data-href="#functions">Functions</a>
+<ul>
+<li data-line="5" class="code-line"><a href="#functions-1" data-href="#functions-1">Functions</a></li>
+<li data-line="6" class="code-line"><a href="#arrow-functions" data-href="#arrow-functions">Arrow Functions</a></li>
+<li data-line="7" class="code-line"><a href="#nested-functions" data-href="#nested-functions">Nested Functions</a></li>
+<li data-line="8" class="code-line"><a href="#recursive-functions" data-href="#recursive-functions">Recursive Functions</a></li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+<h2 id="functions-3" data-line="12" class="code-line">Functions</h2>
+<ul>
+<li data-line="14" class="code-line">Functions in Javascript are a self-contined, block of code designed to be reused</li>
+<li data-line="15" class="code-line">Functions can have any number of parameters and the parameters can be of any type</li>
+<li data-line="16" class="code-line">Functions can return any value or for multiple values, use arrays or objects
+<ul>
+<li data-line="17" class="code-line">Functions can also return other functions</li>
+</ul>
+</li>
+</ul>
+<h2 id="arrow-functions-1" data-line="19" class="code-line">Arrow Functions</h2>
+<ul>
+<li data-line="21" class="code-line">Arrow functions are another way to declare functions
+<ul>
+<li data-line="22" class="code-line">Anonymous so they must be set to a variable</li>
+</ul>
+</li>
+<li data-line="23" class="code-line">Ex.</li>
+</ul>
+<pre><code data-line="24" class="code-line"><code><div>let something = () {
+
+}
+</div></code></code></pre>
+<ul>
+<li data-line="29" class="code-line">Arrow functions allow for shorter syntax
+<ul>
+<li data-line="30" class="code-line">Can have implicit return when only having one line and omitting curly braces</li>
+<li data-line="31" class="code-line">Don't need parenthesis if there is only one parameter being passed</li>
+</ul>
+</li>
+<li data-line="32" class="code-line">Arrow functions are useful because it bind the &quot;this&quot; keyboard for the object in that object's scope</li>
+</ul>
+<h2 id="nested-functions-1" data-line="34" class="code-line">Nested Functions</h2>
+<ul>
+<li data-line="36" class="code-line">You can nest functions within the scope of another function
+<ul>
+<li data-line="37" class="code-line">Useful because it modularizes the code (if inner function is only useful to that outer function)</li>
+<li data-line="38" class="code-line">Also, allows you to reuse names without having to worry about overwriting</li>
+</ul>
+</li>
+<li data-line="39" class="code-line">The nested function is within the outer function's scope
+<ul>
+<li data-line="40" class="code-line">Means it can only be called within the outer function, can't be called outside the outer function</li>
+</ul>
+</li>
+<li data-line="41" class="code-line">Can call a funciton before the definition due to something called <a href="https://www.i-programmer.info/programming/javascript/5364-javascript-hoisting-explained.html" data-href="https://www.i-programmer.info/programming/javascript/5364-javascript-hoisting-explained.html">Hoisting</a></li>
+</ul>
+<h2 id="recursive-functions-1" data-line="43" class="code-line">Recursive Functions</h2>
+<ul>
+<li data-line="45" class="code-line">Recursive functions are when a function invokes itself within its block of statements</li>
+<li data-line="46" class="code-line">Recursion is very useful because it unlocks being able to utilize techniques such as divide and conquer, graph traversal, and new approaches to solve problems</li>
+<li data-line="47" class="code-line">Ex. Factorial recursively</li>
+</ul>
+<pre><code data-line="48" class="code-line"><code><div>function factorial(n) {
+    if (n == 1){
+        return 1
+    }
+
+    return n * factorial(n-1)
+}
+</div></code></code></pre>
+<ul>
+<li data-line="57" class="code-line">In recursion the program stores each function call's information and context on the call stack</li>
+<li data-line="58" class="code-line">When the base case is reached and something returns, the returned value goes to the previous function call's context and that previous function call resumes execution where it left off</li>
+<li data-line="59" class="code-line">If the recursion doesn't end, the function calls will fill up the call stack and the maximum size is reached</li>
+</ul>
+
+</body></html>

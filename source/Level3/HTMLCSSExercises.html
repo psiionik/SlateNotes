@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.18.1/lib/index.min.js">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath@0.6.5/css/texmath.css">
+<link rel="stylesheet" href="https://gitcdn.xyz/repo/goessner/mdmath/master/css/vscode-texmath.css">
+
+</head>
+<body class="markdown-body">
+<h1 id="html-and-css-exercises-1" data-line="0" class="code-line">HTML and CSS Exercises</h1>
+<!-- TOC -->
+<ul>
+<li data-line="4" class="code-line"><a href="#html-and-css-exercises" data-href="#html-and-css-exercises">HTML and CSS Exercises</a>
+<ul>
+<li data-line="5" class="code-line"><a href="#blog-markup-with-css-thoughts" data-href="#blog-markup-with-css-thoughts">Blog Markup with CSS Thoughts</a></li>
+<li data-line="6" class="code-line"><a href="#formatting-text" data-href="#formatting-text">Formatting Text</a></li>
+<li data-line="7" class="code-line"><a href="#tables" data-href="#tables">Tables</a></li>
+<li data-line="8" class="code-line"><a href="#example-form" data-href="#example-form">Example Form</a></li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+<h2 id="blog-markup-with-css-thoughts-1" data-line="12" class="code-line">Blog Markup with CSS Thoughts</h2>
+<ul>
+<li data-line="14" class="code-line">For styling how nav bars look and things like adding &quot;|&quot; in between nav items, CSS is often a better choice
+<ul>
+<li data-line="15" class="code-line">Utilize selectors such as &quot;:last-child&quot; or &quot;::after&quot; to add content or change colors</li>
+</ul>
+</li>
+</ul>
+<h2 id="formatting-text-1" data-line="17" class="code-line">Formatting Text</h2>
+<ul>
+<li data-line="19" class="code-line">Formatting text to have &quot;bold&quot; or &quot;italic&quot; is much easier when you use the <code>&lt;span&gt;</code> element inside the div that holds the content
+<ul>
+<li data-line="20" class="code-line">Since <code>&lt;span&gt;</code> is inline, there is no difference in the visual content, but it becomes easier to select in CSS</li>
+</ul>
+</li>
+</ul>
+<h2 id="tables-1" data-line="22" class="code-line">Tables</h2>
+<ul>
+<li data-line="24" class="code-line">Default tables are ugly, it can help to use CSS selectors to add borders as well as add padding / spacing within the cells</li>
+</ul>
+<h2 id="example-form-1" data-line="26" class="code-line">Example Form</h2>
+<ul>
+<li data-line="28" class="code-line">When trying to make an element larger the better way than setting the width and height largers is to adding <strong>padding</strong> in all 4 directions.</li>
+<li data-line="29" class="code-line">Ex.</li>
+</ul>
+<form action="/test" method="POST">
+      <p>
+        <label>Name</label>
+        <input name="name" required />
+      </p>
+      <p>
+        <label>Email Address</label>
+        <input name="email" type="email" required />
+      </p>
+      <p>
+        <label>Blog URL</label>
+        <input type="url" required placeholder="www.example.com" />
+      </p>
+      <p>
+        <label>Notes</label>
+        <textarea rows="3" placeholder="Anything you want to tell us!"></textarea>
+      </p>
+      <p>
+        <button type="submit">Save!</button>
+      </p>
+</form>
+<style>
+    body {
+        font-family: system-ui;
+    }
+
+    form {
+        width: 50%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input, textarea {
+        width: 300px;
+        padding: 10px;
+    }
+
+    button {
+        background-color: green;
+        border: none;
+        color: white;
+        padding: 10px 30px;
+        border-radius: 4px;
+        cursor: pointer;
+        box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.45);
+    }
+</style>
+</body></html>
