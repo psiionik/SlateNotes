@@ -12,7 +12,9 @@ set :markdown,
     tables: true,
     with_toc_data: true,
     no_intra_emphasis: true,
-    renderer: UniqueHeadCounter
+    renderer: UniqueHeadCounter,
+    :relative_links => true,
+    :relative_assets => true
 
 # Assets
 set :css_dir, 'stylesheets'

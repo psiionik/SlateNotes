@@ -25,7 +25,7 @@
 * Can load images utilizing the ```<img>``` tag
 * Can set specific attributes on it
 
-![Image Elements](./resources/Images.png "Image Elements")
+![Image Elements](/sections/Level2/resources/Images.png "Image Elements")
 
 * The "width" attribute allows you to specify the width of the image
     * Height is automatically set so that the aspect ratio of the original picture is preserved
