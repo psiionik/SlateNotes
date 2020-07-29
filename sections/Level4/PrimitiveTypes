@@ -1,0 +1,118 @@
+<h1 id='primitive-types'>Primitive Types</h1>
+<!-- TOC -->
+
+<ul>
+<li><a href="#primitive-types">Primitive Types</a>
+
+<ul>
+<li><a href="#numbers">Numbers</a></li>
+<li><a href="#exercises-with-numbers">Exercises with Numbers</a></li>
+<li><a href="#strings">Strings</a></li>
+<li><a href="#exercises-with-strings">Exercises with Strings</a></li>
+<li><a href="#booleans">Booleans</a></li>
+<li><a href="#null-and-undefined">Null and Undefined</a></li>
+</ul></li>
+</ul>
+
+<!-- /TOC -->
+<h2 id='numbers'>Numbers</h2>
+<ul>
+<li>Numbers in Javascript represent any kind of Integer, Decimal, or hexadecimal
+
+<ul>
+<li>Numbers can be positive, negative, or prefixed with &quot;0x&quot; to denote hexadecimal</li>
+</ul></li>
+<li>Javascript represents all numbers as &quot;floats&quot; meaning there will be problems with precision</li>
+<li>Ex. 0.1 * 0.1 = 0.0100000000000000000002</li>
+<li>Solution is to not store decimal numbers
+
+<ul>
+<li>If a number has 2 decimals, multiply by 100 before storing</li>
+</ul></li>
+</ul>
+<h2 id='exercises-with-numbers'>Exercises with Numbers</h2>
+<ul>
+<li>In Javascript &quot;number&quot; is different than &quot;Number&quot; as the latter represents the object type of the number</li>
+<li>There are several Number properties that can be utilized
+
+<ul>
+<li>Get max possible integer value &quot;Number.MAX_SAFE_INTEGER&quot;</li>
+</ul></li>
+<li>There are also additional Number object methods
+
+<ul>
+<li>Can check if numbers are integers or finite</li>
+<li>Can parse strings into floats or integers</li>
+</ul></li>
+<li>When you create a new Number object, it has some instance methods that allow you to format the value
+
+<ul>
+<li>Most of the methods such as .toFixed() or .toPrecision() round the internal value</li>
+<li>Access the primitive value using .valueOf()</li>
+</ul></li>
+</ul>
+<h2 id='strings'>Strings</h2>
+<ul>
+<li>Strings in Javascript are just a sequence of characters</li>
+<li>Can be defined with
+
+<ul>
+<li>Single quotes: &#39;&#39;</li>
+<li>Double quotes: &quot;&quot;</li>
+<li>Template literals (backtick) ``</li>
+</ul></li>
+<li>Can concatentate variables with strings or multiple strings with &quot;+&quot; operator</li>
+<li>Template literals allow for easy concatentation of strings and expressions
+
+<ul>
+<li>Use <code>${somevariable or expression}</code> syntax</li>
+</ul></li>
+</ul>
+<h2 id='exercises-with-strings'>Exercises with Strings</h2>
+<ul>
+<li>Strings have a bunch of useful methods
+
+<ul>
+<li>Each of the methods are case sensistive and do not immutable, meaning they don&#39;t mutate the original string</li>
+</ul></li>
+<li>Some useful methods are
+
+<ul>
+<li>trim</li>
+<li>subString</li>
+<li>split</li>
+<li>repeat</li>
+<li>search</li>
+</ul></li>
+<li>Full list <a href="https://thejsbootcamp.com/fWpWQfJ6UAMRiAXAvbB9/14-primitive-types/04/">here</a></li>
+</ul>
+<h2 id='booleans'>Booleans</h2>
+<ul>
+<li>Booleans in Javascript represent &quot;true&quot; and &quot;false&quot;</li>
+<li>Useful for comparison values and controlling the flow of the program using conditionals</li>
+<li>There are &quot;truthy&quot; and &quot;falsy&quot; values which translate to true or false in a conditional
+
+<ul>
+<li>The falsy values are:
+
+<ul>
+<li>0</li>
+<li>-0</li>
+<li>NaN</li>
+<li>undefined</li>
+<li>null</li>
+<li>&#39;&#39;</li>
+</ul></li>
+<li>Rest are truthy</li>
+</ul></li>
+</ul>
+<h2 id='null-and-undefined'>Null and Undefined</h2>
+<ul>
+<li>Javascript reserves &quot;null&quot; and &quot;undefined&quot; as special types with only one value</li>
+<li>&quot;null&quot; represents the absence of a value</li>
+<li>&quot;undefined&quot; represents that a variable is not initialized and the value is absent
+
+<ul>
+<li>In functions with no return value or unintialized parameter</li>
+</ul></li>
+</ul>

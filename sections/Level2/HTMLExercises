@@ -1,0 +1,105 @@
+<h1 id='html-exercises'>HTML Exercises</h1><h2 id='headers'>Headers</h2>
+<ul>
+<li>Have 6 headers to make up the structure of the HTML document</li>
+<li>The smaller the number, the more important it is (and bigger)</li>
+<li>Typically have one h1 header with multiple h2 headers</li>
+</ul>
+<h2 id='semantic-blog-example'>Semantic Blog Example</h2>
+<ul>
+<li>Using semantic headers you can separate sections of the dcoument in a meaningful way</li>
+</ul>
+
+<p><img src="/sections/Level2/resources/Semantic-014ddcf3.png" title="Semantic Structure" alt="Semantic Structure" /></p>
+
+<ul>
+<li>Here we can see from the HTML tags that there is a clear navigation, main, and footer section from the <code>&lt;nav&gt;, &lt;main&gt;, and &lt;footer&gt;</code> tags</li>
+</ul>
+<h2 id='formatting-text'>Formatting Text</h2>
+<ul>
+<li>Can add special emphasis on texts by utilizing the <code>&lt;strong&gt; (bold) and &lt;em&gt; (italic)</code> tags</li>
+<li>Can add separation using <code>&lt;br&gt; and &lt;hr&gt;</code></li>
+<li>Can add quotes by utilizing <code>&lt;blockquote&gt;</code></li>
+</ul>
+<h2 id='images'>Images</h2>
+<ul>
+<li>Can load images utilizing the <code>&lt;img&gt;</code> tag</li>
+<li>Can set specific attributes on it</li>
+</ul>
+
+<p><img src="/sections/Level2/resources/Images-d4edfd9d.png" title="Image Elements" alt="Image Elements" /></p>
+
+<ul>
+<li>The &quot;width&quot; attribute allows you to specify the width of the image
+
+<ul>
+<li>Height is automatically set so that the aspect ratio of the original picture is preserved</li>
+</ul></li>
+<li>Try to create images in the exact size that they will be utilized since the browser scales the images, but the original image will still be the same size which could lead to inefficiencies</li>
+<li>&quot;alt&quot; provides alternate text if the image fails to load</li>
+<li>&quot;title&quot; gives a title of the image when the mouse is hovered over it</li>
+</ul>
+<h2 id='tables'>Tables</h2>
+<ul>
+<li>Tables can easily be created using the <code>&lt;table&gt;, &lt;tr&gt; (Table row), &lt;td&gt; (Table column)</code> tags</li>
+</ul>
+
+<p><img src="/sections/Level2/resources/Tables-4e18a7ae.png" title="Tables" alt="Tables" /></p>
+
+<ul>
+<li>Tables can have other inline elements inside them such as text and images</li>
+<li>Tables can also nest other tables inside them as well</li>
+</ul>
+<h2 id='links'>Links</h2>
+<ul>
+<li>Links are easily created using the <code>&lt;a&gt;</code> tags which stand for anchor</li>
+<li>Using these anchor tags, you can point to a URL outside the domain and also inside the domain</li>
+</ul>
+
+<p><img src="/sections/Level2/resources/Links-a34e638d.png" title="Links" alt="Links" /></p>
+
+<ul>
+<li>In addition, you can add protocols like the &quot;mailto:&quot; protocol in front of the link to perform actions outside of redirecting</li>
+<li>Putting a &quot;#&quot; in front of the href allows it to point to something within the same page with that id
+
+<ul>
+<li>This means that there must be another <code>&lt;a&gt;</code> element with that &quot;id&quot;</li>
+</ul></li>
+</ul>
+<h2 id='head-tag-content'>Head Tag Content</h2>
+<ul>
+<li>In the head, there are a bunch of metadata that you can keep for the page</li>
+<li>Can add title with <code>&lt;title&gt;</code> which changes what the name shows up on browser tab</li>
+<li>Can add CSS styling and Javascript files</li>
+<li>Can also add meta tags that used by the browser, search engines, and social media</li>
+</ul>
+
+<p><img src="/sections/Level2/resources/HeadTags-4ac8f87f.png" title="Head Tags" alt="Head Tags" /></p>
+
+<ul>
+<li>Here the link and the script are referring to external files that are imported by the browser to load CSS and JS</li>
+</ul>
+<h2 id='create-a-form'>Create a Form</h2>
+<ul>
+<li>Can create forms using the <code>&lt;form&gt;</code> tag</li>
+<li>Forms you define fields in the form of <code>&lt;input&gt;</code> tags
+
+<ul>
+<li>Many input types to choose from but usually &quot;text&quot; and &quot;submit&quot; are used</li>
+<li>Submit is used to send the request to the server</li>
+</ul></li>
+<li>Forms have a &quot;method&quot; and &quot;action&quot; attribute
+
+<ul>
+<li>Method chooses what HTTP request method is utilized (default GET)</li>
+<li>Action chooses where to send the request</li>
+</ul></li>
+<li>Fields are inline which mean that they won&#39;t be in their own block
+
+<ul>
+<li>Can wrap <code>&lt;p&gt;</code> tags around each field to give it the block aspect</li>
+</ul></li>
+<li>Can add additional attributes to each input such as &quot;required&quot; which makes the input required</li>
+<li>Ex.</li>
+</ul>
+
+<p><img src="/sections/Level2/resources/Forms-6b7369a5.png" title="Forms" alt="Forms" /></p>

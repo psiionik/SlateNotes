@@ -1,0 +1,380 @@
+<h1 id='networking-basics'>Networking Basics</h1>
+<!-- TOC -->
+
+<ul>
+<li><a href="#networking-basics">Networking Basics</a>
+
+<ul>
+<li><a href="#networking-basics-1">Networking Basics</a></li>
+<li><a href="#rfcs">RFCs</a></li>
+<li><a href="#ip-internet-protocol">IP, Internet Protocol</a></li>
+<li><a href="#ip-address">IP Address</a></li>
+<li><a href="#dns-domain-name-system">DNS Domain Name System</a></li>
+<li><a href="#tcp-protocol">TCP Protocol</a></li>
+<li><a href="#udp-protocol">UDP Protocol</a></li>
+<li><a href="#http">HTTP</a>
+
+<ul>
+<li><a href="#html-documents">HTML Documents</a></li>
+<li><a href="#hyperlinks">HyperLinks</a></li>
+<li><a href="#requests">Requests</a></li>
+<li><a href="#communication">Communication</a></li>
+<li><a href="#other-resources">Other Resources</a></li>
+</ul></li>
+<li><a href="#https">HTTPS</a></li>
+<li><a href="#http2">HTTP/2</a>
+
+<ul>
+<li><a href="#multiplexing">Multiplexing</a></li>
+<li><a href="#headers-compression">Headers Compression</a></li>
+<li><a href="#server-push">Server Push</a></li>
+<li><a href="#binary-communication">Binary Communication</a></li>
+</ul></li>
+<li><a href="#http-request-example">HTTP Request Example</a>
+
+<ul>
+<li><a href="#analyzing-the-url-request">Analyzing the URL Request</a></li>
+<li><a href="#dns-lookup-phase">DNS Lookup Phase</a></li>
+<li><a href="#tcp-request-handshaking">TCP Request Handshaking</a></li>
+<li><a href="#sending-the-request">Sending the request</a></li>
+<li><a href="#the-response">The response</a></li>
+<li><a href="#parse-the-html">Parse the HTML</a></li>
+</ul></li>
+<li><a href="#websockets">Websockets</a></li>
+</ul></li>
+</ul>
+
+<!-- /TOC -->
+<h2 id='networking-basics-2'>Networking Basics</h2>
+<ul>
+<li>Network is built as a series of layers that start from the very low level information exchange protocols called the Physical Layer</li>
+<li>Physical layer contains information for encoding and signaling of data</li>
+<li>The Data Link Layer includes protocols like Wi-fi and defines more protocols that provide data framing, addressing, error detection, etc.</li>
+<li>Higher level stacks upon each other to provide higher level functionality</li>
+<li>Web is built upon stack of protocols called TCP/IP</li>
+<li>IP sits on the Network level</li>
+<li>TCP and UDP sit at Transport level</li>
+<li>HTTP, HTTPS, Websockets are on the Application layer </li>
+</ul>
+<h2 id='rfcs'>RFCs</h2>
+<ul>
+<li>The network protocols are defined by things called RFCs (Request for Comments)</li>
+<li>RFCs are community driven documents that undergo heavy revision before publication and define the official protocols to be standards for people that create software implementations</li>
+</ul>
+<h2 id='ip-internet-protocol'>IP, Internet Protocol</h2>
+<ul>
+<li>IP is the foundation of the internet</li>
+<li>IP is defined to create a communication channel between two computers over the network</li>
+<li>The protocol defines datagrams which is a way to organize the data</li>
+<li>Datagrams have 2 parts:
+
+<ol>
+<li>Header - Metadata about the payload, size, authentication, id number on fragment, source and destination IP address</li>
+<li>Payload - Information to transfer (the data)</li>
+</ol></li>
+<li>When data is transferred from one computer to another, the data is split into fragments where the receiver rebuilds the complete package using the numbering</li>
+<li>This is because the packets that are sent are connectionless, meaning they can take many different routes based on what nodes fail or which route is faster. Since the packets can come out of order, there needs to be a way to rebuild it in the correct order
+
+<ul>
+<li>Intermediate nodes can dynamically alter which next node to send the package to so not all of the packages can arrive at the same time</li>
+</ul></li>
+<li>If all the packets don&#39;t arrive then they are all thrown out and the packages need to be resent</li>
+<li>Each node in the network (computer) is defined with an IP Address</li>
+</ul>
+<h2 id='ip-address'>IP Address</h2>
+<ul>
+<li>In TCP/IP networks, the nodes are identified using IP Addresses</li>
+<li>IP addresses are 4 8-bit numbers separated by dots and correspond to a computer (node) id in a network</li>
+<li>Each number ranges from 0-255
+
+<ul>
+<li>Ex. 212.21.4.28</li>
+</ul></li>
+<li>Everytime the computer connects to a network, a local IP address is created for that computer</li>
+<li>This means that without some sort of method such as Port Forwarding, the IP address cannot be reached from outside the network</li>
+</ul>
+<h2 id='dns-domain-name-system'>DNS Domain Name System</h2>
+<ul>
+<li>Domain Names map a public IP address to a certain String
+
+<ul>
+<li>Ex. google.com</li>
+<li>Allows for changing the server IP address and company used to host the website without having to tell all the users what new IP address to go to</li>
+</ul></li>
+<li>There is a DNS (Domain Name System) that maps domain names to IP addresses</li>
+<li>The DNS is essentially a network of servers and home routers are already pre-configured to reach a specific DNS</li>
+<li>The DNS servers received requests sent by the computer and then properly route to their parent DNS </li>
+<li>Overall, the system is like a tree where the root DNS is at the top and it knows the IP Addresses of the DNS servers below it which are in charge of the IP addresses for extensions such as .com, .gov, .org, etc.</li>
+<li>Then the DNS servers who are in charge of the extensions know the IP address mappings of the domains under it</li>
+<li>This process trickles down to get the specific IP address of the server that you are fetching the request from</li>
+</ul>
+<h2 id='tcp-protocol'>TCP Protocol</h2>
+<ul>
+<li>TCP is the transmission control protocol</li>
+<li>TCP, unlike IP and UDP, is connection oriented; this means that before transmissions can happen, a connection must be established and the data is sent in little packets</li>
+<li>TCP has a process called a handshake when sending data</li>
+<li>TCP&#39;s main benefit is reliability, the protocol ensures that all of the data is correctly sent or it fails and the process has to restart</li>
+<li>Connections happen from process to process where processes are called ports</li>
+<li>Ports are associated with an IP address and correspond to certain processes on that IP address
+
+<ul>
+<li>Ex. localhost:8080, corresponds to the IP address associated with localhost, with process 8080</li>
+</ul></li>
+<li>Some processes like HTTP and HTTPS have their own default ports, which is why when typing in the URL, the port does not need to be specified</li>
+</ul>
+<h2 id='udp-protocol'>UDP Protocol</h2>
+<ul>
+<li>UDP is the user datagram protocol</li>
+<li>Unlike TCP, UDP is transfer based meaning it is connectionless</li>
+<li>This means that it is technically faster than TCP as there are less packets that need to be sent</li>
+<li>Hoewver, UDP is more unreliable than TCP because there is nothing built into the protocol that ensures that all the data has been sent or received correctly
+
+<ul>
+<li>Some higher level process that utilizes UDP would have to create this reliability</li>
+</ul></li>
+<li>UDP also uses ports and is the base for the next HTTP, HTTP/3</li>
+</ul>
+<h2 id='http'>HTTP</h2><h3 id='html-documents'>HTML Documents</h3>
+<ul>
+<li>HTTP was created as a protocol to not only transfer files but also HTML documents in a fail-proof way</li>
+<li>HTTP is not secured but a later version, HTTPS, is</li>
+<li>HTTP is a language for web browsers (clients) to be able communicate with web servers</li>
+</ul>
+<h3 id='hyperlinks'>HyperLinks</h3>
+<ul>
+<li>In web browsers, the documents can contain links that point to other documents
+
+<ul>
+<li>When creating the links, the first part, server IP and protocol is the same, however anything appended after the address is the relative document path</li>
+<li>Ex. https://flaviocopes.com/courses
+
+<ol>
+<li>https is the protocol</li>
+<li>flaviocopes.com is the domain name</li>
+<li>courses is the document relative path in the server</li>
+</ol></li>
+</ul></li>
+</ul>
+<h3 id='requests'>Requests</h3>
+<ul>
+<li>Requests require a method (verb), address, and relative pathing or URL
+
+<ul>
+<li>Ex. GET /axios/ flaviocopes.com</li>
+</ul></li>
+<li>All requests have headers - key : value pairs that are sent to communicate metadata and information to the server
+
+<ul>
+<li>Required header is Host (the domain name that is being requested)</li>
+</ul></li>
+</ul>
+<h3 id='communication'>Communication</h3>
+<ul>
+<li>The HTTP protocol is stateless, meaning each request is assumed to be independent of each other and any prior request is meaningless
+
+<ul>
+<li>This makes the server faster as it doesn&#39;t need to keep track of the state of the client</li>
+<li>This made HTTP the standard as it was quicker and had less overhead than that of other protocols but was also fail-safe as requests are either completed in its entirety or not failed</li>
+</ul></li>
+<li>Communication happens in the following way:
+
+<ul>
+<li>```
+GET /a-page HTTP/1.1
+Host: google.com</li>
+<li>Here we see that the request method is &quot;GET&quot;, the URL is specified, and the protocol</li>
+<li>Below is the headers where we defined the &quot;Host&quot;</li>
+</ul></li>
+<li>Can test with <strong>telnet</strong>
+
+<ul>
+<li>Command line for testing connections with servers</li>
+<li>Doesn&#39;t work with HTTPS protocols since it is unencrypted, but can encrypt with SSL</li>
+</ul></li>
+</ul>
+<h3 id='other-resources'>Other Resources</h3>
+<ul>
+<li>HTTP can give back any type of file not just HTML
+
+<ul>
+<li>CSS, JS, IMG, SVG, etc.</li>
+</ul></li>
+<li>Usually, an HTTP request is made to get the document HTML which contain links to other resources such as CSS and JS files
+
+<ul>
+<li>These links are used in additional HTTP requests to get the necessary files</li>
+</ul></li>
+</ul>
+<h2 id='https'>HTTPS</h2>
+<ul>
+<li>Typically in an HTTP request, two trips are made
+
+<ul>
+<li>One from the client to server requesting the resources</li>
+<li>One from the server to client giving back the requested resources</li>
+</ul></li>
+<li>With more content and links inside the HTML document, additional HTTP requests have to be made over the Client/Server connection</li>
+<li>In all of these connections, someone can listen in and also receive the packets of data if the connection is not encrypted</li>
+<li>HTTPS was made just for that purpose, to encrypt the entire connection from client to server</li>
+<li>In HTTPS everything is encrypted from the query parameters to the headers except for the domain name and the port</li>
+<li>This may require additional computation to encrypt the request and also decrypting the request but HTTP/2 is faster due to:
+
+<ul>
+<li>Header compression</li>
+<li>Resource Multiplexing</li>
+<li>Server push - push more than one resource, HTML, CSS, and JS in one response</li>
+</ul></li>
+</ul>
+<h2 id='http-2'>HTTP/2</h2>
+<ul>
+<li>HTTP/2 is the latest, standardized version of the HTTP protocol</li>
+<li>It is completely backwards compatible and aimed to reduce the inefficiencies of HTTP/1.1</li>
+<li>It has the following new features:
+
+<ul>
+<li>Request and response multiplexing</li>
+<li>Header Compression</li>
+<li>Server Push</li>
+<li>Binary Communication</li>
+</ul></li>
+</ul>
+<h3 id='multiplexing'>Multiplexing</h3>
+<ul>
+<li>Before only one request could be served per TCP connection</li>
+<li>Now HTTP/2 allows for request/response multiplexing over a single TCP connection, allowing the server to serve multiple requests over a single connection</li>
+<li>Made these obsolete:
+
+<ul>
+<li>Image sprites (packing multiple images into one to make one request)</li>
+<li>Domain sharding (hack to prevent browser limit of simultaneous connections to same domain)</li>
+</ul></li>
+</ul>
+<h3 id='headers-compression'>Headers Compression</h3>
+<ul>
+<li>HTTP/2 compresses the header information which makes it much lighter and require less data</li>
+</ul>
+<h3 id='server-push'>Server Push</h3>
+<ul>
+<li>Allows the server to push multiple responses for a single request</li>
+<li>If the server gives back an HTML document as a response, most likely, there are CSS and JS files that are being requested as well, so it will send those as well</li>
+<li>Server can decide to send resources that may be needed in future requests and have the client cache it</li>
+</ul>
+<h3 id='binary-communication'>Binary Communication</h3>
+<ul>
+<li>HTTP/2 uses binary communication which is easier to parse, more compact, and less error prone</li>
+</ul>
+<h2 id='http-request-example'>HTTP Request Example</h2>
+<p><span style="color:orange"><strong>Should Make Blog Post / Visualization diagram</strong></span></p>
+<h3 id='analyzing-the-url-request'>Analyzing the URL Request</h3>
+<ul>
+<li>When something is typed into the URL address bar, if not all the information is provided, it is automatically filled out
+
+<ul>
+<li>Ex. flaviocopes.com, browser will by default prepend http://www to it, making it http://www.flaviocopes.com</li>
+</ul></li>
+</ul>
+<h3 id='dns-lookup-phase'>DNS Lookup Phase</h3>
+<ul>
+<li>There is a whole process to get the host server IP address
+
+<ol>
+<li>Checks the local DNS cache to find the domain</li>
+<li>If not found, the browser uses the gethostname POSIX system call to get the host information</li>
+<li>The system call first checks /etc/hosts to see if the system provides the information locally (makes it a localhost)</li>
+<li>If not there (which is most cases) it makes a request to the DNS server provided by the ISP using the UDP protocol</li>
+<li>The ISP DNS server can have the domain in its cache, but if it doesn&#39;t it goes to the <strong>root DNS server</strong> which resolves the &quot;www&quot; part of the URL</li>
+<li>The root DNS server knows the IP address for the DNS servers that resolve every type of extension (.com, .gov, .edu, etc) called <strong>top level DNS servers</strong></li>
+<li>After matching the extension to the right top level DNS server, the request is forwarded to that top level DNS server</li>
+<li>The DNS resolver then caches the root DNS server so it doesn&#39;t have to look it up again</li>
+<li>The top level DNS server then has a list of registered domain names and their IP addresses</li>
+<li>When buying a domain name, the domain registrar sends the top level DNS server the server name and IP address, the hosting provider provides a bunch of DNS servers to host the website</li>
+<li>These DNS servers have the associated domain name to the IP address and thus the corresponding IP address is found and returned</li>
+</ol></li>
+</ul>
+<h3 id='tcp-request-handshaking'>TCP Request Handshaking</h3>
+<ul>
+<li>Now that the server IP address is found, the browser can initiate a TCP connection to the IP address
+
+<ul>
+<li>This connection requires a bit of sending data back and forth before being able to send data</li>
+</ul></li>
+</ul>
+<h3 id='sending-the-request'>Sending the request</h3>
+<ul>
+<li>Requests are plain text documents written in a certain precise way:</li>
+<li>The request has 3 parts:
+
+<ol>
+<li>The request line 
+
+<ul>
+<li>Sets (on a single line)
+
+<ul>
+<li>HTTP method</li>
+<li>Resource locationo</li>
+<li>Protocol Version</li>
+</ul></li>
+<li>Ex. <code>GET / HTTP/1.1</code></li>
+</ul></li>
+<li>The request header
+
+<ul>
+<li>Sets key : value pairs that contain information about the request, terminated by a blank line</li>
+<li>2 mandatory fields:<br>
+
+<ol>
+<li>Host - Domain name to target</li>
+<li>Connection - Whether to keep connection open or closed after</li>
+</ol></li>
+<li>Ex. 
+<code>
+Host: flaviocopes.com 
+Connection: close
+</code></li>
+</ul></li>
+<li>The request body
+
+<ul>
+<li>Contains data in the form of JSON</li>
+<li>Ex. 
+<code>
+{
+data: {
+some_text
+}
+}
+</code></li>
+</ul></li>
+</ol></li>
+</ul>
+<h3 id='the-response'>The response</h3>
+<ul>
+<li>Server processes the HTTP request and sends back a response</li>
+<li>Starts with status code and a message
+
+<ul>
+<li>Ex. <code>200 OK</code></li>
+</ul></li>
+<li>The response also includes the request headers and the response body</li>
+</ul>
+<h3 id='parse-the-html'>Parse the HTML</h3>
+<ul>
+<li>The browser, which now has the requested HTML will parse it and repeat the same process (for HTTP/1.1) for CSS files, images, JS, etc.</li>
+</ul>
+<h2 id='websockets'>Websockets</h2>
+<ul>
+<li>Websockets are an alternative to the HTTP protocol</li>
+<li>Unlike HTTP, websockets are a long-lived connection meaning once the connection is open and a message is sent, it usually stays open</li>
+<li>Some differences between HTTP and Websockets
+
+<ul>
+<li>Server can send data to client without the client requesting it</li>
+<li>Client and server can talk to each other simultaneously</li>
+<li>Low latency communication since little data overhead is needed to send a request</li>
+</ul></li>
+<li>Websockets are better for long-lived and real-time connection</li>
+<li>HTTP is better for occasional data exchange and interactions initiated by the client</li>
+<li>HTTP is simpler to implement and Websockets require a bit more sophistication</li>
+<li>Secured protocol for Websockets is wss://, ws:// is the unsafe version</li>
+</ul>

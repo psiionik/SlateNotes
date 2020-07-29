@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.18.1/lib/index.min.js">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath@0.6.5/css/texmath.css">
+<link rel="stylesheet" href="https://gitcdn.xyz/repo/goessner/mdmath/master/css/vscode-texmath.css">
+
+</head>
+<body class="markdown-body">
+<h1 id="tailwind-css-and-frameworks-1" data-line="0" class="code-line">TailWind CSS and Frameworks</h1>
+<!-- TOC -->
+<ul>
+<li data-line="4" class="code-line"><a href="#tailwind-css-and-frameworks" data-href="#tailwind-css-and-frameworks">TailWind CSS and Frameworks</a>
+<ul>
+<li data-line="5" class="code-line"><a href="#introduction" data-href="#introduction">Introduction</a></li>
+<li data-line="6" class="code-line"><a href="#tailwind-first-time" data-href="#tailwind-first-time">Tailwind First Time</a></li>
+<li data-line="7" class="code-line"><a href="#tailwind-margin--padding-cheatsheet" data-href="#tailwind-margin--padding-cheatsheet">Tailwind Margin / Padding Cheatsheet</a></li>
+<li data-line="8" class="code-line"><a href="#tailwind-width-cheatsheet" data-href="#tailwind-width-cheatsheet">Tailwind Width Cheatsheet</a></li>
+<li data-line="9" class="code-line"><a href="#tailwind-fonts-cheatsheet" data-href="#tailwind-fonts-cheatsheet">Tailwind Fonts Cheatsheet</a></li>
+<li data-line="10" class="code-line"><a href="#tailwind-colors-cheatsheet" data-href="#tailwind-colors-cheatsheet">Tailwind Colors Cheatsheet</a></li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+<h2 id="introduction-1" data-line="14" class="code-line">Introduction</h2>
+<ul>
+<li data-line="16" class="code-line">There are many frameworks that exist for CSS
+<ul>
+<li data-line="17" class="code-line">Bootstrap</li>
+<li data-line="18" class="code-line">Tailwind</li>
+</ul>
+</li>
+<li data-line="19" class="code-line">Tailwind ties each HTML class to one CSS instruction
+<ul>
+<li data-line="20" class="code-line">To style elements you specify the HTML class rather than writing the CSS by hand</li>
+</ul>
+</li>
+<li data-line="21" class="code-line">Leads to a lot of HTML classes, but tradeoff is don't have to write CSS</li>
+</ul>
+<h2 id="tailwind-first-time-1" data-line="23" class="code-line">Tailwind First Time</h2>
+<ul>
+<li data-line="25" class="code-line">Ex. Using the <code>&lt;link href=&quot;https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css&quot; rel=&quot;stylesheet&quot;&gt;</code> to get the Tailwind CSS framework</li>
+</ul>
+<head>
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+  <form action='/test' method='POST' class="mx-auto text-center mt-10 w-1/2">
+    <p>
+      <label class="block mb-3">Name</label>
+      <input class="w-full border border-gray-400 border-solid p-2 mb-3" name='name' required />
+    </p>
+    <p>
+      <label class="block mb-3">Email address</label>
+      <input class="w-full border border-gray-400 border-solid p-2 mb-3" type='email' name='email' required />
+    </p>
+    <p>
+      <label class="block mb-3">Blog URL</label>
+      <input class="w-full border border-gray-400 border-solid p-2 mb-3" type='url' required placeholder='https://www.example.com' />
+    </p>
+    <p>
+      <label class="block mb-3">Notes</label>
+      <textarea class="border border-gray-400 p-3 w-full" rows='3' placeholder='Anything you want to tell us!'></textarea>
+    </p>
+    <p>
+      <button type='submit' class="mt-5 p-3 pr-5 pl-5 bg-green-500 text-white rounded-lg">Save</button>
+    </p>
+  </form>
+</body>
+<ul>
+<li data-line="54" class="code-line">There is a <a href="https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss" data-href="https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss">Tailwind CSS Intellisense</a> plugin for VS Code</li>
+</ul>
+<h2 id="tailwind-margin--padding-cheatsheet-1" data-line="56" class="code-line">Tailwind Margin / Padding Cheatsheet</h2>
+<ul>
+<li data-line="58" class="code-line"><a href="https://thejsbootcamp.com/fWpWQfJ6UAMRiAXAvbB9/12-tailwind/03/" data-href="https://thejsbootcamp.com/fWpWQfJ6UAMRiAXAvbB9/12-tailwind/03/">Link to cheatsheet</a></li>
+</ul>
+<h2 id="tailwind-width-cheatsheet-1" data-line="60" class="code-line">Tailwind Width Cheatsheet</h2>
+<ul>
+<li data-line="62" class="code-line"><a href="https://thejsbootcamp.com/fWpWQfJ6UAMRiAXAvbB9/12-tailwind/04/" data-href="https://thejsbootcamp.com/fWpWQfJ6UAMRiAXAvbB9/12-tailwind/04/">Link to cheatsheet</a></li>
+</ul>
+<h2 id="tailwind-fonts-cheatsheet-1" data-line="64" class="code-line">Tailwind Fonts Cheatsheet</h2>
+<ul>
+<li data-line="66" class="code-line"><a href="https://thejsbootcamp.com/fWpWQfJ6UAMRiAXAvbB9/12-tailwind/05/" data-href="https://thejsbootcamp.com/fWpWQfJ6UAMRiAXAvbB9/12-tailwind/05/">Link to cheatsheet</a></li>
+</ul>
+<h2 id="tailwind-colors-cheatsheet-1" data-line="68" class="code-line">Tailwind Colors Cheatsheet</h2>
+<ul>
+<li data-line="70" class="code-line"><a href="https://thejsbootcamp.com/fWpWQfJ6UAMRiAXAvbB9/12-tailwind/06/" data-href="https://thejsbootcamp.com/fWpWQfJ6UAMRiAXAvbB9/12-tailwind/06/">Link to cheatsheet</a></li>
+</ul>
+
+</body></html>

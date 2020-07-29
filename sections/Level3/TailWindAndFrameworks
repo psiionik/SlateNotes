@@ -1,0 +1,83 @@
+<h1 id='tailwind-css-and-frameworks'>TailWind CSS and Frameworks</h1>
+<!-- TOC -->
+
+<ul>
+<li><a href="#tailwind-css-and-frameworks">TailWind CSS and Frameworks</a>
+
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#tailwind-first-time">Tailwind First Time</a></li>
+<li><a href="#tailwind-margin--padding-cheatsheet">Tailwind Margin / Padding Cheatsheet</a></li>
+<li><a href="#tailwind-width-cheatsheet">Tailwind Width Cheatsheet</a></li>
+<li><a href="#tailwind-fonts-cheatsheet">Tailwind Fonts Cheatsheet</a></li>
+<li><a href="#tailwind-colors-cheatsheet">Tailwind Colors Cheatsheet</a></li>
+</ul></li>
+</ul>
+
+<!-- /TOC -->
+<h2 id='introduction'>Introduction</h2>
+<ul>
+<li>There are many frameworks that exist for CSS 
+
+<ul>
+<li>Bootstrap</li>
+<li>Tailwind</li>
+</ul></li>
+<li>Tailwind ties each HTML class to one CSS instruction
+
+<ul>
+<li>To style elements you specify the HTML class rather than writing the CSS by hand</li>
+</ul></li>
+<li>Leads to a lot of HTML classes, but tradeoff is don&#39;t have to write CSS</li>
+</ul>
+<h2 id='tailwind-first-time'>Tailwind First Time</h2>
+<ul>
+<li>Ex. Using the <code>&lt;link href=&quot;https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css&quot; rel=&quot;stylesheet&quot;&gt;</code> to get the Tailwind CSS framework
+<head>
+<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+</head></li>
+</ul>
+
+<p><body>
+  <form action='/test' method='POST' class="mx-auto text-center mt-10 w-1/2">
+    <p>
+      <label class="block mb-3">Name</label>
+      <input class="w-full border border-gray-400 border-solid p-2 mb-3" name='name' required />
+    </p>
+    <p>
+      <label class="block mb-3">Email address</label>
+      <input class="w-full border border-gray-400 border-solid p-2 mb-3" type='email' name='email' required />
+    </p>
+    <p>
+      <label class="block mb-3">Blog URL</label>
+      <input class="w-full border border-gray-400 border-solid p-2 mb-3" type='url' required placeholder='https://www.example.com' />
+    </p>
+    <p>
+      <label class="block mb-3">Notes</label>
+      <textarea class="border border-gray-400 p-3 w-full" rows='3' placeholder='Anything you want to tell us!'></textarea>
+    </p>
+    <p>
+      <button type='submit' class="mt-5 p-3 pr-5 pl-5 bg-green-500 text-white rounded-lg">Save</button>
+    </p>
+  </form>
+</body></p>
+
+<ul>
+<li>There is a <a href="https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss">Tailwind CSS Intellisense</a> plugin for VS Code </li>
+</ul>
+<h2 id='tailwind-margin-padding-cheatsheet'>Tailwind Margin / Padding Cheatsheet</h2>
+<ul>
+<li><a href="https://thejsbootcamp.com/fWpWQfJ6UAMRiAXAvbB9/12-tailwind/03/">Link to cheatsheet</a></li>
+</ul>
+<h2 id='tailwind-width-cheatsheet'>Tailwind Width Cheatsheet</h2>
+<ul>
+<li><a href="https://thejsbootcamp.com/fWpWQfJ6UAMRiAXAvbB9/12-tailwind/04/">Link to cheatsheet</a></li>
+</ul>
+<h2 id='tailwind-fonts-cheatsheet'>Tailwind Fonts Cheatsheet</h2>
+<ul>
+<li><a href="https://thejsbootcamp.com/fWpWQfJ6UAMRiAXAvbB9/12-tailwind/05/">Link to cheatsheet</a></li>
+</ul>
+<h2 id='tailwind-colors-cheatsheet'>Tailwind Colors Cheatsheet</h2>
+<ul>
+<li><a href="https://thejsbootcamp.com/fWpWQfJ6UAMRiAXAvbB9/12-tailwind/06/">Link to cheatsheet</a></li>
+</ul>

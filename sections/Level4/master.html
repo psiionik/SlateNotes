@@ -1,0 +1,1023 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Level 4 subsection</title>
+
+    <style media="screen">
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s, .highlight .sa, .highlight .dl {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf, .highlight .fm {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv, .highlight .vm {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #f92672;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <style media="print">
+      * {
+        -webkit-transition:none!important;
+        transition:none!important;
+      }
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight, .highlight .w {
+  color: #586e75;
+}
+.highlight .err {
+  color: #002b36;
+  background-color: #dc322f;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs {
+  color: #657b83;
+}
+.highlight .cp {
+  color: #b58900;
+}
+.highlight .nt {
+  color: #b58900;
+}
+.highlight .o, .highlight .ow {
+  color: #93a1a1;
+}
+.highlight .p, .highlight .pi {
+  color: #93a1a1;
+}
+.highlight .gi {
+  color: #859900;
+}
+.highlight .gd {
+  color: #dc322f;
+}
+.highlight .gh {
+  color: #268bd2;
+  background-color: #002b36;
+  font-weight: bold;
+}
+.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
+  color: #6c71c4;
+}
+.highlight .kc {
+  color: #cb4b16;
+}
+.highlight .kt {
+  color: #cb4b16;
+}
+.highlight .kd {
+  color: #cb4b16;
+}
+.highlight .s, .highlight .sa, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
+  color: #859900;
+}
+.highlight .sr {
+  color: #2aa198;
+}
+.highlight .si {
+  color: #d33682;
+}
+.highlight .se {
+  color: #d33682;
+}
+.highlight .nn {
+  color: #b58900;
+}
+.highlight .nc {
+  color: #b58900;
+}
+.highlight .no {
+  color: #b58900;
+}
+.highlight .na {
+  color: #268bd2;
+}
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mx {
+  color: #859900;
+}
+.highlight .ss {
+  color: #859900;
+}
+    </style>
+    <link href="../../stylesheets/screen-fc003750.css" rel="stylesheet" media="screen" />
+    <link href="../../stylesheets/print-953e3353.css" rel="stylesheet" media="print" />
+      <script src="../../javascripts/all-1361b384.js"></script>
+
+  </head>
+
+  <body class="sections sections_Level4 sections_Level4_master" data-languages="[&quot;javascript&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="../../images/navbar-cad8cdcb.png" alt="" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="../../images/notes.svg-5634f4e6.png" class="logo" alt="" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="javascript">javascript</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#javascript-basics" class="toc-h1 toc-link" data-title="Javascript Basics">Javascript Basics</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#introduction-to-javascript" class="toc-h2 toc-link" data-title="Introduction to Javascript">Introduction to Javascript</a>
+                  </li>
+                  <li>
+                    <a href="#javascript-history" class="toc-h2 toc-link" data-title="Javascript History">Javascript History</a>
+                  </li>
+                  <li>
+                    <a href="#javascript-syntax-intro" class="toc-h2 toc-link" data-title="Javascript Syntax Intro">Javascript Syntax Intro</a>
+                    <ul class="toc-list-h3">
+                        <li>
+                          <a href="#white-space" class="toc-h3 toc-link" data-title="White Space">White Space</a>
+      </li>
+                        <li>
+                          <a href="#case-sensitive" class="toc-h3 toc-link" data-title="Case Sensitive">Case Sensitive</a>
+      </li>
+                        <li>
+                          <a href="#literals" class="toc-h3 toc-link" data-title="Literals">Literals</a>
+      </li>
+                        <li>
+                          <a href="#identifiers" class="toc-h3 toc-link" data-title="Identifiers">Identifiers</a>
+      </li>
+                        <li>
+                          <a href="#comments" class="toc-h3 toc-link" data-title="Comments">Comments</a>
+      </li>
+                        <li>
+                          <a href="#semicolons" class="toc-h3 toc-link" data-title="Semicolons">Semicolons</a>
+      </li>
+  </ul>
+                  </li>
+                  <li>
+                    <a href="#values" class="toc-h2 toc-link" data-title="Values">Values</a>
+                  </li>
+                  <li>
+                    <a href="#variables" class="toc-h2 toc-link" data-title="Variables">Variables</a>
+                    <ul class="toc-list-h3">
+                        <li>
+                          <a href="#const" class="toc-h3 toc-link" data-title="const">const</a>
+      </li>
+                        <li>
+                          <a href="#let" class="toc-h3 toc-link" data-title="let">let</a>
+      </li>
+  </ul>
+                  </li>
+                  <li>
+                    <a href="#types" class="toc-h2 toc-link" data-title="Types">Types</a>
+                  </li>
+                  <li>
+                    <a href="#basic-expressions" class="toc-h2 toc-link" data-title="Basic Expressions">Basic Expressions</a>
+                  </li>
+                  <li>
+                    <a href="#operators" class="toc-h2 toc-link" data-title="Operators">Operators</a>
+                  </li>
+                  <li>
+                    <a href="#precedence-rules" class="toc-h2 toc-link" data-title="Precedence Rules">Precedence Rules</a>
+                  </li>
+                  <li>
+                    <a href="#comparison-operators" class="toc-h2 toc-link" data-title="Comparison Operators">Comparison Operators</a>
+                  </li>
+                  <li>
+                    <a href="#conditionals" class="toc-h2 toc-link" data-title="Conditionals">Conditionals</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#primitive-types" class="toc-h1 toc-link" data-title="Primitive Types">Primitive Types</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#numbers" class="toc-h2 toc-link" data-title="Numbers">Numbers</a>
+                  </li>
+                  <li>
+                    <a href="#exercises-with-numbers" class="toc-h2 toc-link" data-title="Exercises with Numbers">Exercises with Numbers</a>
+                  </li>
+                  <li>
+                    <a href="#strings" class="toc-h2 toc-link" data-title="Strings">Strings</a>
+                  </li>
+                  <li>
+                    <a href="#exercises-with-strings" class="toc-h2 toc-link" data-title="Exercises with Strings">Exercises with Strings</a>
+                  </li>
+                  <li>
+                    <a href="#booleans" class="toc-h2 toc-link" data-title="Booleans">Booleans</a>
+                  </li>
+                  <li>
+                    <a href="#null-and-undefined" class="toc-h2 toc-link" data-title="Null and Undefined">Null and Undefined</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#functions" class="toc-h1 toc-link" data-title="Functions">Functions</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#functions-2" class="toc-h2 toc-link" data-title="Functions">Functions</a>
+                  </li>
+                  <li>
+                    <a href="#arrow-functions" class="toc-h2 toc-link" data-title="Arrow Functions">Arrow Functions</a>
+                  </li>
+                  <li>
+                    <a href="#nested-functions" class="toc-h2 toc-link" data-title="Nested Functions">Nested Functions</a>
+                  </li>
+                  <li>
+                    <a href="#recursive-functions" class="toc-h2 toc-link" data-title="Recursive Functions">Recursive Functions</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#objects" class="toc-h1 toc-link" data-title="Objects">Objects</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#intro-to-objects" class="toc-h2 toc-link" data-title="Intro to Objects">Intro to Objects</a>
+                  </li>
+              </ul>
+          </li>
+      </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='javascript-basics'>Javascript Basics</h1>
+
+<!-- TOC -->
+
+<ul>
+<li><a href="#javascript-basics">Javascript Basics</a>
+
+<ul>
+<li><a href="#introduction-to-javascript">Introduction to Javascript</a></li>
+<li><a href="#javascript-history">Javascript History</a></li>
+<li><a href="#javascript-syntax-intro">Javascript Syntax Intro</a>
+
+<ul>
+<li><a href="#white-space">White Space</a></li>
+<li><a href="#case-sensitive">Case Sensitive</a></li>
+<li><a href="#literals">Literals</a></li>
+<li><a href="#identifiers">Identifiers</a></li>
+<li><a href="#comments">Comments</a></li>
+<li><a href="#semicolons">Semicolons</a></li>
+</ul></li>
+<li><a href="#values">Values</a></li>
+<li><a href="#variables">Variables</a>
+
+<ul>
+<li><a href="#const">const</a></li>
+<li><a href="#let">let</a></li>
+</ul></li>
+<li><a href="#types">Types</a></li>
+<li><a href="#basic-expressions">Basic Expressions</a></li>
+<li><a href="#operators">Operators</a></li>
+<li><a href="#precedence-rules">Precedence Rules</a></li>
+<li><a href="#comparison-operators">Comparison Operators</a></li>
+<li><a href="#conditionals">Conditionals</a></li>
+</ul></li>
+</ul>
+
+<!-- /TOC -->
+
+<h2 id='introduction-to-javascript'>Introduction to Javascript</h2>
+
+<ul>
+<li>Javascript is mainly used to create:
+
+<ul>
+<li>Websites</li>
+<li>Web applications</li>
+<li>Server-side applications using NodeJS</li>
+</ul></li>
+<li>Can be also used to create mobile applications, create programs for microcontrollers, or create smartwatch applications</li>
+<li>Javascript features are:
+
+<ul>
+<li>high level - provides abstractions to lower level code
+
+<ul>
+<li>Has garbage collection, provides abstracts and constructs such as classes that allow you to deal with powerful variables and objects</li>
+</ul></li>
+<li>dynamic - executes things at runtime such as:
+
+<ul>
+<li>dynamic typing</li>
+<li>late binding</li>
+<li>reflection</li>
+<li>functional programming</li>
+<li>object runtime alteration</li>
+<li>closures</li>
+</ul></li>
+<li>dynamically typed - variables don&#39;t enforce types, can reassign values of different types</li>
+<li>loosely typed - no enforcing of types on a variable, but leads to issues with type safety and type checking</li>
+<li>interpreted - unlike C++ or Java, Javascript is interpreted meaning that it doesn&#39;t neeed to compile the code into machine code</li>
+<li>multi-paradigmed - Javascript does not enforce a certain programming style
+
+<ul>
+<li>Unlike C which enforces an imperative style or Java which enforces an object-oriented style</li>
+<li>Javascript gives you the option to program in an object-oriented style using ES6 classes or a functional style with first-class functions</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h2 id='javascript-history'>Javascript History</h2>
+
+<ul>
+<li>First scripting language natively supported by web browsers that gives it an advantage
+
+<ul>
+<li>Other languages need to be compiled into Javascript</li>
+</ul></li>
+<li>Javascript now has grown past just the client-side applications by being able to write server-side code as well as power databases, develop embedded applications, mobile apps, etc.</li>
+</ul>
+
+<h2 id='javascript-syntax-intro'>Javascript Syntax Intro</h2><h3 id='white-space'>White Space</h3>
+<ul>
+<li>Javascript doesn&#39;t care about the amount of spaces or line breaks</li>
+<li>Stick to a style and use linters such as <strong>Prettier</strong></li>
+</ul>
+<h3 id='case-sensitive'>Case Sensitive</h3>
+<ul>
+<li>Javascript is case sensitive</li>
+<li>&quot;Something&quot; is not the same as &quot;something&quot;</li>
+</ul>
+<h3 id='literals'>Literals</h3>
+<ul>
+<li>The values that is written into the source code</li>
+<li>Can be things like numbers, strings, arrays, functions, objects, etc.</li>
+</ul>
+<h3 id='identifiers'>Identifiers</h3>
+<ul>
+<li>Sequence of characters that are used to identify a variable, function, or object</li>
+<li>Characters include: letters, dollar sign, underscore, numbers</li>
+</ul>
+<h3 id='comments'>Comments</h3>
+<ul>
+<li>Single line comments using &quot;//&quot;</li>
+<li>Ex.
+<code>
+// This is a comment
+function test() {
+//...
+}
+</code></li>
+<li>Multi-line comments using &quot;/* */&quot;</li>
+<li>Ex.
+<code>
+/* This is
+a multi
+line
+comment
+*/
+</code></li>
+</ul>
+<h3 id='semicolons'>Semicolons</h3>
+<ul>
+<li>In Javascript, semicolons are necessary at the end of each line, but now Javascript intepreters are smart enough to add semi-colons on the end of each line</li>
+<li>Not necessary unlesss it must be absolutely specified</li>
+</ul>
+<h2 id='values'>Values</h2>
+
+<ul>
+<li>&quot;hello&quot; is a value and is of type &quot;string&quot;</li>
+<li>Values have a type such as &quot;string&quot; or &quot;number&quot; but each type has their own characteritics</li>
+<li>When needing to save a value, you create a variable and pass the reference of the value to the variable
+
+<ul>
+<li>The variable has a name and the value is what is stored inside it so that you can later access the value through the variable name</li>
+</ul></li>
+</ul>
+
+<h2 id='variables'>Variables</h2>
+
+<ul>
+<li>A variable is a reference to a value using a label
+
+<ul>
+<li>This is done to reference it and use it later in a program</li>
+</ul></li>
+<li>3 ways to declare a variable
+
+<ul>
+<li>let</li>
+<li>const</li>
+<li>var</li>
+</ul></li>
+</ul>
+
+<h3 id='const'>const</h3>
+
+<ul>
+<li>&quot;const&quot; refers to a constant reference to a value
+
+<ul>
+<li>This means that the value of the variable cannot change</li>
+</ul></li>
+<li>&quot;const&quot; doesn&#39;t mean constant meaning that the value cannot change
+
+<ul>
+<li>It just means that it cannot be reassigned</li>
+<li>Objects that are referenced with const can have their internal values changed</li>
+</ul></li>
+</ul>
+
+<h3 id='let'>let</h3>
+
+<ul>
+<li>A way of declaring variable that allows for changing the value of the variable</li>
+<li>Better to use const if you know that the variable won&#39;t be reassigned since it leads to less code bugs</li>
+</ul>
+
+<h2 id='types'>Types</h2>
+
+<ul>
+<li>When assigning a value to a variable, you give it a &quot;type&quot;</li>
+<li>Since Javascript is loosely typed, the type of the variable can be reassigned to a host of another type</li>
+<li>2 main types:
+
+<ol>
+<li>Primitive types
+
+<ul>
+<li>Numbers</li>
+<li>Strings</li>
+<li>Booleans</li>
+<li>Symbols</li>
+<li>null</li>
+<li>undefined</li>
+</ul></li>
+<li>Object types
+
+<ul>
+<li>Anything that is not a primitive type </li>
+<li>Objects have special properties and methods that can be used to act on those properties</li>
+</ul></li>
+</ol></li>
+</ul>
+
+<h2 id='basic-expressions'>Basic Expressions</h2>
+
+<ul>
+<li>Expression is a single unit of Javascript code that the Javascript engine can evaluate and return a value</li>
+<li>Different types of basic expressions
+
+<ul>
+<li>Primary - just one type or value</li>
+<li>Arithmetic - involving a variable and an operator and result in a number</li>
+<li>String - expressions that result in strings</li>
+<li>Logical - expressions that use logical operators and resolve into a boolean value </li>
+</ul></li>
+</ul>
+
+<h2 id='operators'>Operators</h2>
+
+<ul>
+<li>Operators take in 1 - 3 operands to combine them in to a more complicated expression</li>
+<li>Examples of binary operators (2 operands)
+
+<ul>
+<li>&quot;=&quot; - assignment</li>
+<li>&quot;+&quot; - addition
+
+<ul>
+<li>Doubles as a string concatenator when dealing with strings</li>
+</ul></li>
+<li>&quot;-&quot; - subtraction</li>
+<li>&quot;/&quot; - division
+
+<ul>
+<li>Dividing by 0 gives an &quot;Infinity&quot; value</li>
+</ul></li>
+<li>&quot;%&quot; - Remainder 
+
+<ul>
+<li>Remainder with 0 gives &quot;NaN&quot; (not a number)</li>
+</ul></li>
+<li>&quot;*&quot; - multiplication</li>
+<li>&quot;**&quot; - exponentation or power</li>
+</ul></li>
+</ul>
+
+<h2 id='precedence-rules'>Precedence Rules</h2>
+
+<ul>
+<li>When there are multiple operators within one expression, there are precedence rules that come into play</li>
+<li>In this table is the operators with their precedence (higher the in the table means higher precedence)</li>
+</ul>
+
+<table>
+    <tr>
+        <th>
+            Operator
+        </th>
+        <th>
+            Description
+        </th>
+    </tr>
+    <tr>
+        <td>
+            */%
+        </td>
+        <td>
+            Multiplication/Division/Remainder
+        </td>
+    </tr>
+    <tr>
+        <td>
+            +-
+        </td>
+        <td>
+            Addition/Subtraction
+        </td>
+    </tr>
+    <tr>
+        <td>
+            =
+        </td>
+        <td>
+            Assignment
+        </td>
+    </tr>
+</table>
+
+<ul>
+<li>Operators that are on the same precedence level get executed sequentially from left to right</li>
+</ul>
+
+<h2 id='comparison-operators'>Comparison Operators</h2>
+
+<ul>
+<li>These operators are used for comparing the values of 2 operands</li>
+<li>It always returns a boolean value</li>
+<li>4 equality operators
+
+<ul>
+<li>&quot;===&quot; - equal to and type is equal</li>
+<li>&quot;!==&quot; - not equal to and type is not equal</li>
+<li>&quot;==&quot; - equal to</li>
+<li>&quot;!=&quot; - not equal to</li>
+</ul></li>
+<li>4 inequality operators
+
+<ul>
+<li>&quot;&gt;&quot; - greater than</li>
+<li>&quot;&lt;&quot; - less than</li>
+<li>&quot;&gt;=&quot; greater than or equal to</li>
+<li>&quot;&lt;=&quot; less than or equal to</li>
+</ul></li>
+</ul>
+
+<h2 id='conditionals'>Conditionals</h2>
+
+<ul>
+<li>Conditionals allow you to take one route or another depending on the result of an expression</li>
+<li>Conditional checks whether the result of the expression is true or false 
+
+<ul>
+<li>If number is passed, it is always true unless the number is 0</li>
+<li>If string is passed, it is always true unless it is the empty string &quot;&quot;</li>
+</ul></li>
+<li>After the conditional a statement must be added to execute
+
+<ul>
+<li>Put inside things called &quot;blocks&quot; which are represented by the curly braces &quot;{}&quot;</li>
+</ul></li>
+<li>An &quot;Else&quot; statement can be added to the second part of the if statement for executing statements in the case that the conditional is false</li>
+</ul>
+
+<h1 id='primitive-types'>Primitive Types</h1>
+
+<!-- TOC -->
+
+<ul>
+<li><a href="#primitive-types">Primitive Types</a>
+
+<ul>
+<li><a href="#numbers">Numbers</a></li>
+<li><a href="#exercises-with-numbers">Exercises with Numbers</a></li>
+<li><a href="#strings">Strings</a></li>
+<li><a href="#exercises-with-strings">Exercises with Strings</a></li>
+<li><a href="#booleans">Booleans</a></li>
+<li><a href="#null-and-undefined">Null and Undefined</a></li>
+</ul></li>
+</ul>
+
+<!-- /TOC -->
+
+<h2 id='numbers'>Numbers</h2>
+
+<ul>
+<li>Numbers in Javascript represent any kind of Integer, Decimal, or hexadecimal
+
+<ul>
+<li>Numbers can be positive, negative, or prefixed with &quot;0x&quot; to denote hexadecimal</li>
+</ul></li>
+<li>Javascript represents all numbers as &quot;floats&quot; meaning there will be problems with precision</li>
+<li>Ex. 0.1 * 0.1 = 0.0100000000000000000002</li>
+<li>Solution is to not store decimal numbers
+
+<ul>
+<li>If a number has 2 decimals, multiply by 100 before storing</li>
+</ul></li>
+</ul>
+
+<h2 id='exercises-with-numbers'>Exercises with Numbers</h2>
+
+<ul>
+<li>In Javascript &quot;number&quot; is different than &quot;Number&quot; as the latter represents the object type of the number</li>
+<li>There are several Number properties that can be utilized
+
+<ul>
+<li>Get max possible integer value &quot;Number.MAX_SAFE_INTEGER&quot;</li>
+</ul></li>
+<li>There are also additional Number object methods
+
+<ul>
+<li>Can check if numbers are integers or finite</li>
+<li>Can parse strings into floats or integers</li>
+</ul></li>
+<li>When you create a new Number object, it has some instance methods that allow you to format the value
+
+<ul>
+<li>Most of the methods such as .toFixed() or .toPrecision() round the internal value</li>
+<li>Access the primitive value using .valueOf()</li>
+</ul></li>
+</ul>
+
+<h2 id='strings'>Strings</h2>
+
+<ul>
+<li>Strings in Javascript are just a sequence of characters</li>
+<li>Can be defined with
+
+<ul>
+<li>Single quotes: &#39;&#39;</li>
+<li>Double quotes: &quot;&quot;</li>
+<li>Template literals (backtick) ``</li>
+</ul></li>
+<li>Can concatentate variables with strings or multiple strings with &quot;+&quot; operator</li>
+<li>Template literals allow for easy concatentation of strings and expressions
+
+<ul>
+<li>Use <code>${somevariable or expression}</code> syntax</li>
+</ul></li>
+</ul>
+
+<h2 id='exercises-with-strings'>Exercises with Strings</h2>
+
+<ul>
+<li>Strings have a bunch of useful methods
+
+<ul>
+<li>Each of the methods are case sensistive and do not immutable, meaning they don&#39;t mutate the original string</li>
+</ul></li>
+<li>Some useful methods are
+
+<ul>
+<li>trim</li>
+<li>subString</li>
+<li>split</li>
+<li>repeat</li>
+<li>search</li>
+</ul></li>
+<li>Full list <a href="https://thejsbootcamp.com/fWpWQfJ6UAMRiAXAvbB9/14-primitive-types/04/">here</a></li>
+</ul>
+
+<h2 id='booleans'>Booleans</h2>
+
+<ul>
+<li>Booleans in Javascript represent &quot;true&quot; and &quot;false&quot;</li>
+<li>Useful for comparison values and controlling the flow of the program using conditionals</li>
+<li>There are &quot;truthy&quot; and &quot;falsy&quot; values which translate to true or false in a conditional
+
+<ul>
+<li>The falsy values are:
+
+<ul>
+<li>0</li>
+<li>-0</li>
+<li>NaN</li>
+<li>undefined</li>
+<li>null</li>
+<li>&#39;&#39;</li>
+</ul></li>
+<li>Rest are truthy</li>
+</ul></li>
+</ul>
+
+<h2 id='null-and-undefined'>Null and Undefined</h2>
+
+<ul>
+<li>Javascript reserves &quot;null&quot; and &quot;undefined&quot; as special types with only one value</li>
+<li>&quot;null&quot; represents the absence of a value</li>
+<li>&quot;undefined&quot; represents that a variable is not initialized and the value is absent
+
+<ul>
+<li>In functions with no return value or unintialized parameter</li>
+</ul></li>
+</ul>
+
+<h1 id='functions'>Functions</h1>
+
+<!-- TOC -->
+
+<ul>
+<li><a href="#functions">Functions</a>
+
+<ul>
+<li><a href="#functions-1">Functions</a></li>
+<li><a href="#arrow-functions">Arrow Functions</a></li>
+<li><a href="#nested-functions">Nested Functions</a></li>
+<li><a href="#recursive-functions">Recursive Functions</a></li>
+</ul></li>
+</ul>
+
+<!-- /TOC -->
+
+<h2 id='functions-2'>Functions</h2>
+
+<ul>
+<li>Functions in Javascript are a self-contined, block of code designed to be reused</li>
+<li>Functions can have any number of parameters and the parameters can be of any type</li>
+<li>Functions can return any value or for multiple values, use arrays or objects
+
+<ul>
+<li>Functions can also return other functions</li>
+</ul></li>
+</ul>
+
+<h2 id='arrow-functions'>Arrow Functions</h2>
+
+<ul>
+<li>Arrow functions are another way to declare functions
+
+<ul>
+<li>Anonymous so they must be set to a variable</li>
+</ul></li>
+<li>Ex.
+```
+let something = () {</li>
+</ul>
+
+<p>}
+```
+* Arrow functions allow for shorter syntax
+    * Can have implicit return when only having one line and omitting curly braces
+    * Don&#39;t need parenthesis if there is only one parameter being passed
+* Arrow functions are useful because it bind the &quot;this&quot; keyboard for the object in that object&#39;s scope</p>
+
+<h2 id='nested-functions'>Nested Functions</h2>
+
+<ul>
+<li>You can nest functions within the scope of another function
+
+<ul>
+<li>Useful because it modularizes the code (if inner function is only useful to that outer function)</li>
+<li>Also, allows you to reuse names without having to worry about overwriting</li>
+</ul></li>
+<li>The nested function is within the outer function&#39;s scope
+
+<ul>
+<li>Means it can only be called within the outer function, can&#39;t be called outside the outer function</li>
+</ul></li>
+<li>Can call a funciton before the definition due to something called <a href="https://www.i-programmer.info/programming/javascript/5364-javascript-hoisting-explained.html">Hoisting</a></li>
+</ul>
+
+<h2 id='recursive-functions'>Recursive Functions</h2>
+
+<ul>
+<li>Recursive functions are when a function invokes itself within its block of statements</li>
+<li>Recursion is very useful because it unlocks being able to utilize techniques such as divide and conquer, graph traversal, and new approaches to solve problems</li>
+<li><p>Ex. Factorial recursively
+```
+function factorial(n) {
+if (n == 1){
+    return 1
+}</p>
+
+<p>return n * factorial(n-1)
+}
+```</p></li>
+<li><p>In recursion the program stores each function call&#39;s information and context on the call stack</p></li>
+<li><p>When the base case is reached and something returns, the returned value goes to the previous function call&#39;s context and that previous function call resumes execution where it left off</p></li>
+<li><p>If the recursion doesn&#39;t end, the function calls will fill up the call stack and the maximum size is reached</p></li>
+</ul>
+
+<h1 id='objects'>Objects</h1>
+
+<!-- TOC -->
+
+<ul>
+<li><a href="#objects">Objects</a>
+
+<ul>
+<li><a href="#intro-to-objects">Intro to Objects</a></li>
+</ul></li>
+</ul>
+
+<!-- /TOC -->
+
+<h2 id='intro-to-objects'>Intro to Objects</h2>
+
+<ul>
+<li>In JS any value that is not a primitive type is an object</li>
+<li>Can initialize an object as a &quot;class&quot; by having the &quot;new&quot; keyword before the function call
+
+<ul>
+<li>Ex.
+<code>
+const myCar = new Car(params)
+</code></li>
+</ul></li>
+<li>Objects are always passed by reference</li>
+</ul>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="javascript">javascript</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>

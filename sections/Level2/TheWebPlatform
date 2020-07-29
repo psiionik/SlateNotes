@@ -1,0 +1,53 @@
+<h1 id='the-web-platform-ecosystem'>The Web Platform Ecosystem</h1>
+<!-- TOC -->
+
+<ul>
+<li><a href="#the-web-platform-ecosystem">The Web Platform Ecosystem</a>
+
+<ul>
+<li><a href="#introduction-to-web">Introduction To Web</a></li>
+<li><a href="#the-big-picture">The Big Picture</a></li>
+<li><a href="#how-websites-work">How Websites Work</a></li>
+<li><a href="#how-webapps-work">How WebApps Work</a></li>
+<li><a href="#web-browsers">Web Browsers</a></li>
+<li><a href="#web-servers">Web Servers</a></li>
+</ul></li>
+</ul>
+
+<!-- /TOC -->
+<h2 id='introduction-to-web'>Introduction To Web</h2>
+<ul>
+<li>Born on the concept of documents being linked together</li>
+</ul>
+<h2 id='the-big-picture'>The Big Picture</h2>
+<ul>
+<li>When opening a webpage a request is made to the server</li>
+<li>Connection is made using a protocols such as HTTP, IP, TCP</li>
+<li>HTML is used to structure pages, CSS customizes how the pages look, Javascript is used to program the webpages so that they are interactive</li>
+</ul>
+<h2 id='how-websites-work'>How Websites Work</h2>
+<ul>
+<li>In the end, websites are just HTML files that are served through a server</li>
+<li>If there is not much Javascript, it is called a website</li>
+<li>If there is a lot of Javascript and it changes how the page works, it is called a web application</li>
+</ul>
+<h2 id='how-webapps-work'>How WebApps Work</h2>
+<ul>
+<li>A web application is an application that runs inside the browser</li>
+<li>Nowadays, the Web is an application platform for applications to run inside the browser</li>
+<li>The web is a platform that runs other programs</li>
+</ul>
+<h2 id='web-browsers'>Web Browsers</h2>
+<ul>
+<li>4 Main Web Browsers, Chrome, Safari, Firefox, Edge, that all comply to a set of standards and rules defined by W3C</li>
+<li>Browsers offer APIs that allow you to create code to interact with the computer</li>
+<li>Main task of the browser is to get input from the user, through the URL or bookmarks or links, and then internally look up the webpage to contact the server for the files to give to the client</li>
+<li>Browsers also provide debugging tools for developers</li>
+</ul>
+<h2 id='web-servers'>Web Servers</h2>
+<ul>
+<li>A server is a software that responds to requests made by clients</li>
+<li>The web has a client/server model where one server typically serves many clients</li>
+<li>Clients are generally web browsers running the frontend code that are served from the servers, but can also be scripts or programs in a computer</li>
+<li>Server is the hardware that allows the server to run, in modern technology, the server is usually cloud based</li>
+</ul>

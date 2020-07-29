@@ -1,0 +1,546 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.18.1/lib/index.min.js">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath@0.6.5/css/texmath.css">
+<link rel="stylesheet" href="https://gitcdn.xyz/repo/goessner/mdmath/master/css/vscode-texmath.css">
+
+</head>
+<body class="markdown-body">
+<h1 id="css-basics" data-line="0" class="code-line">CSS Basics</h1>
+<ul>
+<li data-line="2" class="code-line"><a href="#css-basics" data-href="#css-basics">CSS Basics</a>
+<ul>
+<li data-line="3" class="code-line"><a href="#introduction-to-css" data-href="#introduction-to-css">Introduction to CSS</a></li>
+<li data-line="4" class="code-line"><a href="#adding-css-to-html-page" data-href="#adding-css-to-html-page">Adding CSS to HTML page</a></li>
+<li data-line="5" class="code-line"><a href="#selectors" data-href="#selectors">Selectors</a>
+<ul>
+<li data-line="6" class="code-line"><a href="#basic-selectors" data-href="#basic-selectors">Basic Selectors</a></li>
+<li data-line="7" class="code-line"><a href="#combining-selectors" data-href="#combining-selectors">Combining Selectors</a></li>
+<li data-line="8" class="code-line"><a href="#grouping-selectors" data-href="#grouping-selectors">Grouping Selectors</a></li>
+<li data-line="9" class="code-line"><a href="#selectors-by-following-document-tree-structure" data-href="#selectors-by-following-document-tree-structure">Selectors by following Document Tree Structure</a></li>
+</ul>
+</li>
+<li data-line="10" class="code-line"><a href="#cascade" data-href="#cascade">Cascade</a></li>
+<li data-line="11" class="code-line"><a href="#specificity" data-href="#specificity">Specificity</a>
+<ul>
+<li data-line="12" class="code-line"><a href="#specificity-calculation" data-href="#specificity-calculation">Specificity Calculation</a></li>
+</ul>
+</li>
+<li data-line="13" class="code-line"><a href="#inheritance" data-href="#inheritance">Inheritance</a></li>
+<li data-line="14" class="code-line"><a href="#attribute-selectors" data-href="#attribute-selectors">Attribute Selectors</a></li>
+<li data-line="15" class="code-line"><a href="#pseudo-classes" data-href="#pseudo-classes">Pseudo Classes</a></li>
+<li data-line="16" class="code-line"><a href="#pseudo-elements" data-href="#pseudo-elements">Pseudo Elements</a></li>
+<li data-line="17" class="code-line"><a href="#colors" data-href="#colors">Colors</a></li>
+<li data-line="18" class="code-line"><a href="#units" data-href="#units">Units</a>
+<ul>
+<li data-line="19" class="code-line"><a href="#pixels" data-href="#pixels">Pixels</a></li>
+<li data-line="20" class="code-line"><a href="#percentages" data-href="#percentages">Percentages</a></li>
+<li data-line="21" class="code-line"><a href="#relative-units" data-href="#relative-units">Relative Units</a></li>
+<li data-line="22" class="code-line"><a href="#viewport-units" data-href="#viewport-units">Viewport Units</a></li>
+<li data-line="23" class="code-line"><a href="#fraction-units" data-href="#fraction-units">Fraction Units</a></li>
+</ul>
+</li>
+<li data-line="24" class="code-line"><a href="#url" data-href="#url">URL()</a></li>
+<li data-line="25" class="code-line"><a href="#calc" data-href="#calc">Calc()</a></li>
+<li data-line="26" class="code-line"><a href="#backgrounds" data-href="#backgrounds">Backgrounds</a></li>
+<li data-line="27" class="code-line"><a href="#comments" data-href="#comments">Comments</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="introduction-to-css" data-line="29" class="code-line">Introduction to CSS</h2>
+<ul>
+<li data-line="31" class="code-line">CSS is used to style an HTML page and the corresponding elements</li>
+<li data-line="32" class="code-line">CSS file has 2 parts:
+<ol>
+<li data-line="33" class="code-line">Selector</li>
+<li data-line="34" class="code-line">Declaration Block</li>
+</ol>
+</li>
+<li data-line="35" class="code-line">Declarations are made in property / value pairs where the property selects the type and the value changes the value</li>
+<li data-line="36" class="code-line">A CSS rule set has a selector part and a declaration
+<ul>
+<li data-line="37" class="code-line">Ex.</li>
+</ul>
+<pre><code data-line="38" class="code-line"><code><div>p {
+    font-size: 20px;
+}
+</div></code></code></pre>
+</li>
+<li data-line="43" class="code-line">Can select more than one tag at a time</li>
+<li data-line="44" class="code-line">For classes use &quot;.&quot; before name
+<ul>
+<li data-line="45" class="code-line">Ex.</li>
+</ul>
+<pre><code data-line="46" class="code-line"><code><div>.my-class {
+
+}
+</div></code></code></pre>
+</li>
+<li data-line="51" class="code-line">For Id us &quot;#&quot; before name
+<ul>
+<li data-line="52" class="code-line">Ex.</li>
+</ul>
+<pre><code data-line="53" class="code-line"><code><div>#my-id {
+
+}
+</div></code></code></pre>
+</li>
+</ul>
+<h2 id="adding-css-to-html-page" data-line="59" class="code-line">Adding CSS to HTML page</h2>
+<ul>
+<li data-line="61" class="code-line">CSS can be added to an HTML page in 3 ways:
+<ol>
+<li data-line="62" class="code-line">Using the <code>&lt;link&gt;</code> tag
+<ul>
+<li data-line="63" class="code-line">Adds an external CSS file rules to the HTML page</li>
+<li data-line="64" class="code-line">Ex.<pre><code data-line="65" class="code-line"><code><div>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;myfile.css&quot;&gt;
+</div></code></code></pre>
+</li>
+</ul>
+</li>
+<li data-line="68" class="code-line">Using the <code>&lt;style&gt;</code> tag
+<ul>
+<li data-line="69" class="code-line">Allow for adding some custom CSS tags to an HTML file</li>
+<li data-line="70" class="code-line">Ex.<pre><code data-line="71" class="code-line"><code><div>&lt;style&gt;
+    CSS Rules
+&lt;/style&gt;
+</div></code></code></pre>
+</li>
+</ul>
+</li>
+<li data-line="76" class="code-line">Inline styles
+<ul>
+<li data-line="77" class="code-line">Can add specific inline styling to specific HTML elements</li>
+<li data-line="78" class="code-line">Ex.<pre><code data-line="79" class="code-line"><code><div>&lt;div style=&quot;background-color: yellow&quot;&gt;...&lt;/div&gt;
+</div></code></code></pre>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="selectors" data-line="83" class="code-line">Selectors</h2>
+<ul>
+<li data-line="85" class="code-line">Selectors is the idea of selecting elements in the HTML tree to target for the CSS declaration rules</li>
+<li data-line="86" class="code-line">Selectors can range from very basic to very specific</li>
+</ul>
+<h3 id="basic-selectors" data-line="88" class="code-line">Basic Selectors</h3>
+<ul>
+<li data-line="90" class="code-line">Basic selectors entail selecting a single HTML element either by tag, class name, or id</li>
+<li data-line="91" class="code-line">Ex. To target <code>&lt;p&gt;</code> elements,</li>
+</ul>
+<pre><code data-line="92" class="code-line"><code><div>p {
+    font-size: 20px;
+}
+</div></code></code></pre>
+<ul>
+<li data-line="97" class="code-line">The same works for classes and Id</li>
+<li data-line="98" class="code-line">Class</li>
+</ul>
+<pre><code data-line="99" class="code-line"><code><div>.class-name {
+    rules...
+}
+</div></code></code></pre>
+<ul>
+<li data-line="104" class="code-line">Ids</li>
+</ul>
+<pre><code data-line="105" class="code-line"><code><div>#id-name {
+    rules...
+}
+</div></code></code></pre>
+<h3 id="combining-selectors" data-line="111" class="code-line">Combining Selectors</h3>
+<ul>
+<li data-line="113" class="code-line">
+<p data-line="113" class="code-line">Can target an element by class-name or id</p>
+</li>
+<li data-line="114" class="code-line">
+<p data-line="114" class="code-line">Ex.</p>
+<pre><code data-line="115" class="code-line"><code><div>    &lt;p class=&quot;dog-name&gt;
+        Roger
+    &lt;/p&gt;
+    ...
+    p.dog-name {
+        rules...
+    }
+</div></code></code></pre>
+</li>
+<li data-line="125" class="code-line">
+<p data-line="125" class="code-line">For targetting multiple classes, combine the class-names in the selector without spaces</p>
+</li>
+<li data-line="126" class="code-line">
+<p data-line="126" class="code-line">Ex.</p>
+</li>
+</ul>
+<pre><code data-line="127" class="code-line"><code><div>.dog-name.roger {
+    rules...
+}
+</div></code></code></pre>
+<h3 id="grouping-selectors" data-line="133" class="code-line">Grouping Selectors</h3>
+<ul>
+<li data-line="135" class="code-line">Can combine selectors so that the rules apply to multiple elements by having a comma in between</li>
+<li data-line="136" class="code-line">Ex.</li>
+</ul>
+<pre><code data-line="137" class="code-line"><code><div>p, .dog-name {
+  color: yellow;
+}
+</div></code></code></pre>
+<h3 id="selectors-by-following-document-tree-structure" data-line="143" class="code-line">Selectors by following Document Tree Structure</h3>
+<ul>
+<li data-line="145" class="code-line">Use spaces in between to target children of a targeted element</li>
+<li data-line="146" class="code-line">Ex.</li>
+</ul>
+<pre><code data-line="147" class="code-line"><code><div>p span {
+  color: yellow;
+}
+</div></code></code></pre>
+<ul>
+<li data-line="152" class="code-line">This targets span elements that are children of p elements</li>
+</ul>
+<h2 id="cascade" data-line="154" class="code-line">Cascade</h2>
+<ul>
+<li data-line="156" class="code-line">Cascading is an important topic within the realm of CSS in styling HTML pages</li>
+<li data-line="157" class="code-line">There is a certain order and priority that gets applied for rules because sometimes there can be conflicting rules</li>
+<li data-line="158" class="code-line">What it considers in the algorithm to figure the cascading are:
+<ul>
+<li data-line="159" class="code-line">specificity</li>
+<li data-line="160" class="code-line">importance</li>
+<li data-line="161" class="code-line">inheritance</li>
+<li data-line="162" class="code-line">order in the file</li>
+</ul>
+</li>
+</ul>
+<h2 id="specificity" data-line="164" class="code-line">Specificity</h2>
+<ul>
+<li data-line="166" class="code-line">Specificity is determined by a system where the more specific rule will win
+<ul>
+<li data-line="167" class="code-line">If two rules have the same specificity, the one that appears later in the file wins</li>
+</ul>
+</li>
+</ul>
+<h3 id="specificity-calculation" data-line="169" class="code-line">Specificity Calculation</h3>
+<ul>
+<li data-line="171" class="code-line">
+<p data-line="171" class="code-line">Specificity is calculated by utilizing a 4 number system</p>
+</li>
+<li data-line="172" class="code-line">
+<p data-line="172" class="code-line">There are 4 slots and all of them starts at 0</p>
+<ul>
+<li data-line="173" class="code-line">0 0 0 0</li>
+<li data-line="174" class="code-line">The slot at the leftmost is the most important and the rightmost is the least important</li>
+<li data-line="175" class="code-line">Ex. 1 0 0 0 is higher specificity than 0 1 0 0</li>
+</ul>
+</li>
+<li data-line="176" class="code-line">
+<p data-line="176" class="code-line">Slot 1:</p>
+<ul>
+<li data-line="177" class="code-line">Slot 1 is incremented when there is an element selector</li>
+<li data-line="178" class="code-line">Ex.</li>
+</ul>
+<pre><code data-line="179" class="code-line"><code><div>p {}                    /* 0 0 0 1 */
+span {} 				/* 0 0 0 1 */
+p span {} 			    /* 0 0 0 2 */
+p &gt; span {} 			/* 0 0 0 2 */
+div p &gt; span {} 		/* 0 0 0 3 */
+</div></code></code></pre>
+</li>
+<li data-line="186" class="code-line">
+<p data-line="186" class="code-line">Slot 2:</p>
+<ul>
+<li data-line="187" class="code-line">Slot 2 is incremented by:
+<ol>
+<li data-line="188" class="code-line">class selectors</li>
+<li data-line="189" class="code-line">pseudo-class selectors</li>
+<li data-line="190" class="code-line">attribute selectors</li>
+</ol>
+</li>
+<li data-line="191" class="code-line">Ex.</li>
+</ul>
+<pre><code data-line="192" class="code-line"><code><div>.name {}				/* 0 0 1 0 */
+.users .name {}		    /* 0 0 2 0 */
+[href$='.pdf'] {}	    /* 0 0 1 0 */
+:hover {}				/* 0 0 1 0 */
+</div></code></code></pre>
+</li>
+<li data-line="198" class="code-line">
+<p data-line="198" class="code-line">Slot 3:</p>
+<ul>
+<li data-line="199" class="code-line">Slot 3 is incremented by id selectors</li>
+<li data-line="200" class="code-line">Ex.</li>
+</ul>
+<pre><code data-line="201" class="code-line"><code><div>#name {}					/* 0 1 0 0 */
+.user #name {}			    /* 0 1 1 0 */
+#name span {}			    /* 0 1 0 1 */
+</div></code></code></pre>
+</li>
+<li data-line="206" class="code-line">
+<p data-line="206" class="code-line">Slot 4:</p>
+<ul>
+<li data-line="207" class="code-line">Slot 4 is incremented by inline styling</li>
+<li data-line="208" class="code-line">Inline styling will have the most precedence over any rule</li>
+<li data-line="209" class="code-line">Ex.</li>
+</ul>
+<pre><code data-line="210" class="code-line"><code><div>&lt;p style=&quot;color: red&quot;&gt;Test&lt;/p&gt; /* 1 0 0 0 */
+</div></code></code></pre>
+</li>
+<li data-line="214" class="code-line">
+<p data-line="214" class="code-line">!important can be used to override any styling precedence</p>
+</li>
+<li data-line="215" class="code-line">
+<p data-line="215" class="code-line">Ex.</p>
+</li>
+</ul>
+<pre><code data-line="216" class="code-line"><code><div>p {
+  font-size: 20px!important;
+}
+</div></code></code></pre>
+<ul>
+<li data-line="221" class="code-line">By making this rule, this will take precendence over any CSS rule except for those that also have !important, which in that case will resolve using the specificity rules above</li>
+<li data-line="222" class="code-line">Generally its better to not utilize id rules and !important as this can create issues if multiple CSS files are utilized in one HTML page</li>
+<li data-line="223" class="code-line">Rather, more specific rules should be creating by combining selectors</li>
+<li data-line="224" class="code-line">!important should only be utilized to see some kind of effect when testing</li>
+</ul>
+<h2 id="inheritance" data-line="226" class="code-line">Inheritance</h2>
+<ul>
+<li data-line="228" class="code-line">Some CSS properties inherit from parent to child without having to explicitly state the rule in the child while others don't</li>
+<li data-line="229" class="code-line">For example, &quot;font-family&quot; gets inherited from the parent to child by default but &quot;background-color&quot; does not get inherited from parent to child</li>
+<li data-line="230" class="code-line">To force properties to inherit, create a property rule in the parent and then have &quot;inherit&quot; as the value in the child</li>
+<li data-line="231" class="code-line">Ex.</li>
+</ul>
+<pre><code data-line="232" class="code-line"><code><div>body {
+    background-color: yellow;
+}
+p {
+    background-color: inherit;
+}
+</div></code></code></pre>
+<ul>
+<li data-line="240" class="code-line">There are also methods to prevent inheriting in the children or reverting</li>
+</ul>
+<h2 id="attribute-selectors" data-line="242" class="code-line">Attribute Selectors</h2>
+<ul>
+<li data-line="244" class="code-line">There are also ways to specify selectors to target HTML elements by their attributes</li>
+<li data-line="245" class="code-line">It is possible to target a certain element tag with a id attribute utilizing the &quot;[]&quot; syntax</li>
+<li data-line="246" class="code-line">Ex.</li>
+</ul>
+<pre><code data-line="247" class="code-line"><code><div>p[id] {
+    rules...
+}
+</div></code></code></pre>
+<ul>
+<li data-line="252" class="code-line">This will select all <code>&lt;p&gt;</code> elements that have an &quot;id&quot; attribute regardless of value</li>
+<li data-line="253" class="code-line">Attribute selectors can also be matching to some regex pattern or exact</li>
+<li data-line="254" class="code-line">Ex.</li>
+</ul>
+<pre><code data-line="255" class="code-line"><code><div>p[id=&quot;my-id] {
+    rules...
+}
+</div></code></code></pre>
+<ul>
+<li data-line="260" class="code-line">In this case the CSS will only apply when the element is a <code>&lt;p&gt;</code> tag and the id attribute matches that string</li>
+</ul>
+<h2 id="pseudo-classes" data-line="262" class="code-line">Pseudo Classes</h2>
+<ul>
+<li data-line="264" class="code-line">Pseudo classes are predefined keywords that are used to select elements based on their state or to target a specific child</li>
+<li data-line="265" class="code-line">One of the most popular ones that are used is &quot;:hover&quot;
+<ul>
+<li data-line="266" class="code-line">This targets an element if it is hovered over</li>
+</ul>
+</li>
+<li data-line="267" class="code-line">Ex. When links are clicked, they switch state to &quot;:active&quot; and &quot;:visited&quot;</li>
+</ul>
+<pre><code data-line="268" class="code-line"><code><div>a,
+a:visited,
+a:active {
+  color: yellow;
+}
+</div></code></code></pre>
+<ul>
+<li data-line="275" class="code-line">Can write the CSS selector utilizing pseudo-classes to make sure that the CSS stays regardless of the element's state</li>
+<li data-line="276" class="code-line">:nth-child() is another option as it allows for targeting odd and even children
+<ul>
+<li data-line="277" class="code-line">Often utilized to style lists such that the style is different for adjacent children</li>
+</ul>
+</li>
+</ul>
+<h2 id="pseudo-elements" data-line="279" class="code-line">Pseudo Elements</h2>
+<ul>
+<li data-line="281" class="code-line">Used to style a specific part of an element</li>
+<li data-line="282" class="code-line">Syntax starts with &quot;::&quot;</li>
+<li data-line="283" class="code-line">The most common one are &quot;before&quot; and &quot;after&quot; which allow you to add content before or after an element
+<ul>
+<li data-line="284" class="code-line">Most commonly used for adding things like icons</li>
+<li data-line="285" class="code-line">Must specify the content property before inserting</li>
+</ul>
+</li>
+<li data-line="286" class="code-line">Ex.</li>
+</ul>
+<pre><code data-line="287" class="code-line"><code><div>p::before {
+  content: url(/myimage.png);
+}
+
+.myElement::before {
+	content: &quot;Hey Hey!&quot;;
+}
+</div></code></code></pre>
+<h2 id="colors" data-line="297" class="code-line">Colors</h2>
+<ul>
+<li data-line="299" class="code-line">Colors can be added to HTML elements through:
+<ul>
+<li data-line="300" class="code-line">color</li>
+<li data-line="301" class="code-line">background-color</li>
+<li data-line="302" class="code-line">border-color</li>
+</ul>
+</li>
+<li data-line="303" class="code-line">There are different ways to set colors:
+<ul>
+<li data-line="304" class="code-line">Named colors - Something like &quot;blue&quot; that CSS has predefined to work when trying to set the color</li>
+<li data-line="305" class="code-line">RGB / RGBA - allows you to pick the rgb and alpha value
+<ul>
+<li data-line="306" class="code-line">These values go from 0 - 255</li>
+<li data-line="307" class="code-line">Ex. rgb(0, 0, 0) will be black</li>
+<li data-line="308" class="code-line">The rgba() allows you to add transparency through the last channel</li>
+</ul>
+</li>
+<li data-line="309" class="code-line">Hexadecimal Notation - in the form of &quot;#ffffff&quot; or &quot;#fff&quot;
+<ul>
+<li data-line="310" class="code-line">Express the numbers in 3 two digit numbers which range from 0 - 15 (0 - f)</li>
+<li data-line="311" class="code-line">Can also add two extra digits for the alpha channel at the end</li>
+</ul>
+</li>
+<li data-line="312" class="code-line">HSL / HSLA - For hue, saturation, and lightness
+<ul>
+<li data-line="313" class="code-line">This is the same as RGB / RGBA but it is just in another format</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="units" data-line="315" class="code-line">Units</h2>
+<ul>
+<li data-line="317" class="code-line">Units are standardized definitions in CSS that allow to easily set lengths, paddings, margins, etc.</li>
+</ul>
+<h3 id="pixels" data-line="319" class="code-line">Pixels</h3>
+<ul>
+<li data-line="321" class="code-line">Pixels are the most widely utilized measurement unit</li>
+<li data-line="322" class="code-line">It doesn't exactly correspond to 1 exact pixel because of the difference in retinas of devices, but allows for a easy, standardized measurement</li>
+<li data-line="323" class="code-line">Ex.</li>
+</ul>
+<pre><code data-line="324" class="code-line"><code><div>p {
+    margin-top: 20px;
+}
+</div></code></code></pre>
+<h3 id="percentages" data-line="330" class="code-line">Percentages</h3>
+<ul>
+<li data-line="332" class="code-line">Percentages allow you to define properties based on the parent's value</li>
+</ul>
+<pre><code data-line="333" class="code-line"><code><div>.parent {
+    width: 400px
+}
+.child {
+    width: 50%; /* = 200px */
+}
+</div></code></code></pre>
+<h3 id="relative-units" data-line="342" class="code-line">Relative Units</h3>
+<ul>
+<li data-line="344" class="code-line">Commonly used are relative units that are relative to a font-size</li>
+<li data-line="345" class="code-line">&quot;em&quot; is the value assigned to that element's font-size</li>
+<li data-line="346" class="code-line">&quot;rem&quot; is the same as &quot;em&quot; but it measures the root element's font-size
+<ul>
+<li data-line="347" class="code-line">Allows for consistency across the entire document</li>
+</ul>
+</li>
+</ul>
+<h3 id="viewport-units" data-line="349" class="code-line">Viewport Units</h3>
+<ul>
+<li data-line="351" class="code-line">&quot;vw&quot; is the viewport width which takes a percentage of the viewport width
+<ul>
+<li data-line="352" class="code-line">Ex. 50vw means 50% of the viewport width</li>
+</ul>
+</li>
+<li data-line="353" class="code-line">&quot;vh&quot; is the viewport height which takes a percentage of the viewport height</li>
+<li data-line="354" class="code-line">&quot;vmin&quot; is the viewport minimum that represents the minimum between the height and width in terms of percentage
+<ul>
+<li data-line="355" class="code-line">Ex. 30vmin is the 30% of the current width or height, whatever is smaller</li>
+</ul>
+</li>
+<li data-line="356" class="code-line">&quot;vmax&quot; is the same as &quot;vmin&quot; just maximum</li>
+<li data-line="357" class="code-line">Viewport units are not inherited, meaning to set the height based on a viewport percentage, the parent's height does not need to be specified</li>
+</ul>
+<h3 id="fraction-units" data-line="359" class="code-line">Fraction Units</h3>
+<ul>
+<li data-line="361" class="code-line">&quot;fr&quot; are fraction units that are utilized in CSS Grids to divide space into fractions</li>
+</ul>
+<h2 id="url" data-line="363" class="code-line">URL()</h2>
+<ul>
+<li data-line="365" class="code-line">URLs are used to load resources such as images, gifs, mp4s, sound, etc.</li>
+<li data-line="366" class="code-line">Ex.</li>
+</ul>
+<pre><code data-line="367" class="code-line"><code><div>div {
+    background-image: url(test.png);
+}
+</div></code></code></pre>
+<ul>
+<li data-line="372" class="code-line">The url provided can be a relative URL, external absolute URL, or can find from the root of the domain of the CSS</li>
+</ul>
+<h2 id="calc" data-line="374" class="code-line">Calc()</h2>
+<ul>
+<li data-line="376" class="code-line">calc() function allows for performing basic math operations on values
+<ul>
+<li data-line="377" class="code-line">Especially useful for adding or subtracting a length from a percentage</li>
+<li data-line="378" class="code-line">Ex.</li>
+</ul>
+<pre><code data-line="379" class="code-line"><code><div>div {
+    max-width: calc(80% - 100px)
+}
+</div></code></code></pre>
+</li>
+<li data-line="384" class="code-line">Returns a &quot;length&quot; value so it can be used anywhere that expects a pixel value</li>
+<li data-line="385" class="code-line">Ex.</li>
+</ul>
+<style>
+    .calc {
+        background-color: cyan;
+        width: calc(80% - 200px);
+    }
+</style>
+<p class="calc">
+    Width of element defined using the calc() function
+</p>
+<h2 id="backgrounds" data-line="398" class="code-line">Backgrounds</h2>
+<ul>
+<li data-line="400" class="code-line">Backgrounds of elements can be set with numerous properties</li>
+<li data-line="401" class="code-line">Most popular are:
+<ul>
+<li data-line="402" class="code-line">background-color</li>
+<li data-line="403" class="code-line">background-image</li>
+<li data-line="404" class="code-line">background-attachment</li>
+<li data-line="405" class="code-line">background-size</li>
+<li data-line="406" class="code-line">background-repeat</li>
+</ul>
+</li>
+<li data-line="407" class="code-line">Ex.</li>
+</ul>
+<style>
+    .background-example {
+        background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#F3F333));
+        background: linear-gradient(#ffffff, #F3F333);
+        width: 100%;
+        height: 100px;
+    }
+</style>
+<p class="background-example">
+    Background example with linear gradient
+</p>
+<h2 id="comments" data-line="421" class="code-line">Comments</h2>
+<ul>
+<li data-line="423" class="code-line">For commenting in CSS, only block comments are allowed</li>
+<li data-line="424" class="code-line">The syntax is <code>/*...*/</code></li>
+<li data-line="425" class="code-line">Helps since this allowed you to comment out multiple lines until <code>*/</code> is reached</li>
+<li data-line="426" class="code-line">CSS doesn't have inline comments so only block comments can be used</li>
+</ul>
+
+</body></html>

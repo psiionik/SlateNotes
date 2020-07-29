@@ -1,0 +1,2270 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Level 3 subsection</title>
+
+    <style media="screen">
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s, .highlight .sa, .highlight .dl {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf, .highlight .fm {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv, .highlight .vm {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #f92672;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <style media="print">
+      * {
+        -webkit-transition:none!important;
+        transition:none!important;
+      }
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight, .highlight .w {
+  color: #586e75;
+}
+.highlight .err {
+  color: #002b36;
+  background-color: #dc322f;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs {
+  color: #657b83;
+}
+.highlight .cp {
+  color: #b58900;
+}
+.highlight .nt {
+  color: #b58900;
+}
+.highlight .o, .highlight .ow {
+  color: #93a1a1;
+}
+.highlight .p, .highlight .pi {
+  color: #93a1a1;
+}
+.highlight .gi {
+  color: #859900;
+}
+.highlight .gd {
+  color: #dc322f;
+}
+.highlight .gh {
+  color: #268bd2;
+  background-color: #002b36;
+  font-weight: bold;
+}
+.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
+  color: #6c71c4;
+}
+.highlight .kc {
+  color: #cb4b16;
+}
+.highlight .kt {
+  color: #cb4b16;
+}
+.highlight .kd {
+  color: #cb4b16;
+}
+.highlight .s, .highlight .sa, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
+  color: #859900;
+}
+.highlight .sr {
+  color: #2aa198;
+}
+.highlight .si {
+  color: #d33682;
+}
+.highlight .se {
+  color: #d33682;
+}
+.highlight .nn {
+  color: #b58900;
+}
+.highlight .nc {
+  color: #b58900;
+}
+.highlight .no {
+  color: #b58900;
+}
+.highlight .na {
+  color: #268bd2;
+}
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mx {
+  color: #859900;
+}
+.highlight .ss {
+  color: #859900;
+}
+    </style>
+    <link href="../../stylesheets/screen-fc003750.css" rel="stylesheet" media="screen" />
+    <link href="../../stylesheets/print-953e3353.css" rel="stylesheet" media="print" />
+      <script src="../../javascripts/all-1361b384.js"></script>
+
+  </head>
+
+  <body class="sections sections_Level3 sections_Level3_master" data-languages="[&quot;javascript&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="../../images/navbar-cad8cdcb.png" alt="" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="../../images/notes.svg-5634f4e6.png" class="logo" alt="" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="javascript">javascript</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#css-basics" class="toc-h1 toc-link" data-title="CSS Basics">CSS Basics</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#introduction-to-css" class="toc-h2 toc-link" data-title="Introduction to CSS">Introduction to CSS</a>
+                  </li>
+                  <li>
+                    <a href="#adding-css-to-html-page" class="toc-h2 toc-link" data-title="Adding CSS to HTML page">Adding CSS to HTML page</a>
+                  </li>
+                  <li>
+                    <a href="#selectors" class="toc-h2 toc-link" data-title="Selectors">Selectors</a>
+                    <ul class="toc-list-h3">
+                        <li>
+                          <a href="#basic-selectors" class="toc-h3 toc-link" data-title="Basic Selectors">Basic Selectors</a>
+      </li>
+                        <li>
+                          <a href="#combining-selectors" class="toc-h3 toc-link" data-title="Combining Selectors">Combining Selectors</a>
+      </li>
+                        <li>
+                          <a href="#grouping-selectors" class="toc-h3 toc-link" data-title="Grouping Selectors">Grouping Selectors</a>
+      </li>
+                        <li>
+                          <a href="#selectors-by-following-document-tree-structure" class="toc-h3 toc-link" data-title="Selectors by following Document Tree Structure">Selectors by following Document Tree Structure</a>
+      </li>
+  </ul>
+                  </li>
+                  <li>
+                    <a href="#cascade" class="toc-h2 toc-link" data-title="Cascade">Cascade</a>
+                  </li>
+                  <li>
+                    <a href="#specificity" class="toc-h2 toc-link" data-title="Specificity">Specificity</a>
+                    <ul class="toc-list-h3">
+                        <li>
+                          <a href="#specificity-calculation" class="toc-h3 toc-link" data-title="Specificity Calculation">Specificity Calculation</a>
+      </li>
+  </ul>
+                  </li>
+                  <li>
+                    <a href="#inheritance" class="toc-h2 toc-link" data-title="Inheritance">Inheritance</a>
+                  </li>
+                  <li>
+                    <a href="#attribute-selectors" class="toc-h2 toc-link" data-title="Attribute Selectors">Attribute Selectors</a>
+                  </li>
+                  <li>
+                    <a href="#pseudo-classes" class="toc-h2 toc-link" data-title="Pseudo Classes">Pseudo Classes</a>
+                  </li>
+                  <li>
+                    <a href="#pseudo-elements" class="toc-h2 toc-link" data-title="Pseudo Elements">Pseudo Elements</a>
+                  </li>
+                  <li>
+                    <a href="#colors" class="toc-h2 toc-link" data-title="Colors">Colors</a>
+                  </li>
+                  <li>
+                    <a href="#units" class="toc-h2 toc-link" data-title="Units">Units</a>
+                    <ul class="toc-list-h3">
+                        <li>
+                          <a href="#pixels" class="toc-h3 toc-link" data-title="Pixels">Pixels</a>
+      </li>
+                        <li>
+                          <a href="#percentages" class="toc-h3 toc-link" data-title="Percentages">Percentages</a>
+      </li>
+                        <li>
+                          <a href="#relative-units" class="toc-h3 toc-link" data-title="Relative Units">Relative Units</a>
+      </li>
+                        <li>
+                          <a href="#viewport-units" class="toc-h3 toc-link" data-title="Viewport Units">Viewport Units</a>
+      </li>
+                        <li>
+                          <a href="#fraction-units" class="toc-h3 toc-link" data-title="Fraction Units">Fraction Units</a>
+      </li>
+  </ul>
+                  </li>
+                  <li>
+                    <a href="#url" class="toc-h2 toc-link" data-title="URL()">URL()</a>
+                  </li>
+                  <li>
+                    <a href="#calc" class="toc-h2 toc-link" data-title="Calc()">Calc()</a>
+                  </li>
+                  <li>
+                    <a href="#backgrounds" class="toc-h2 toc-link" data-title="Backgrounds">Backgrounds</a>
+                  </li>
+                  <li>
+                    <a href="#comments" class="toc-h2 toc-link" data-title="Comments">Comments</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#more-css" class="toc-h1 toc-link" data-title="More CSS">More CSS</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#box-model" class="toc-h2 toc-link" data-title="Box Model">Box Model</a>
+                  </li>
+                  <li>
+                    <a href="#border" class="toc-h2 toc-link" data-title="Border">Border</a>
+                    <ul class="toc-list-h3">
+                        <li>
+                          <a href="#border-style" class="toc-h3 toc-link" data-title="Border-style">Border-style</a>
+      </li>
+                        <li>
+                          <a href="#border-width" class="toc-h3 toc-link" data-title="Border-width">Border-width</a>
+      </li>
+                        <li>
+                          <a href="#border-color" class="toc-h3 toc-link" data-title="Border-color">Border-color</a>
+      </li>
+                        <li>
+                          <a href="#border-radius" class="toc-h3 toc-link" data-title="Border-radius">Border-radius</a>
+      </li>
+  </ul>
+                  </li>
+                  <li>
+                    <a href="#margin" class="toc-h2 toc-link" data-title="Margin">Margin</a>
+                  </li>
+                  <li>
+                    <a href="#padding" class="toc-h2 toc-link" data-title="Padding">Padding</a>
+                  </li>
+                  <li>
+                    <a href="#box-sizing" class="toc-h2 toc-link" data-title="Box Sizing">Box Sizing</a>
+                  </li>
+                  <li>
+                    <a href="#display" class="toc-h2 toc-link" data-title="Display">Display</a>
+                    <ul class="toc-list-h3">
+                        <li>
+                          <a href="#inline" class="toc-h3 toc-link" data-title="Inline">Inline</a>
+      </li>
+                        <li>
+                          <a href="#block" class="toc-h3 toc-link" data-title="Block">Block</a>
+      </li>
+                        <li>
+                          <a href="#none" class="toc-h3 toc-link" data-title="None">None</a>
+      </li>
+  </ul>
+                  </li>
+                  <li>
+                    <a href="#positioning" class="toc-h2 toc-link" data-title="Positioning">Positioning</a>
+                    <ul class="toc-list-h3">
+                        <li>
+                          <a href="#static" class="toc-h3 toc-link" data-title="Static">Static</a>
+      </li>
+                        <li>
+                          <a href="#relative" class="toc-h3 toc-link" data-title="Relative">Relative</a>
+      </li>
+                        <li>
+                          <a href="#absolute" class="toc-h3 toc-link" data-title="Absolute">Absolute</a>
+      </li>
+                        <li>
+                          <a href="#fixed" class="toc-h3 toc-link" data-title="Fixed">Fixed</a>
+      </li>
+                        <li>
+                          <a href="#sticky" class="toc-h3 toc-link" data-title="Sticky">Sticky</a>
+      </li>
+  </ul>
+                  </li>
+                  <li>
+                    <a href="#floating" class="toc-h2 toc-link" data-title="Floating">Floating</a>
+                    <ul class="toc-list-h3">
+                        <li>
+                          <a href="#clearing" class="toc-h3 toc-link" data-title="Clearing">Clearing</a>
+      </li>
+  </ul>
+                  </li>
+                  <li>
+                    <a href="#tables" class="toc-h2 toc-link" data-title="Tables">Tables</a>
+                  </li>
+                  <li>
+                    <a href="#centering" class="toc-h2 toc-link" data-title="Centering">Centering</a>
+                  </li>
+                  <li>
+                    <a href="#lists" class="toc-h2 toc-link" data-title="Lists">Lists</a>
+                    <ul class="toc-list-h3">
+                        <li>
+                          <a href="#list-style-type" class="toc-h3 toc-link" data-title="list-style-type">list-style-type</a>
+      </li>
+                        <li>
+                          <a href="#list-style-image" class="toc-h3 toc-link" data-title="list-style-image">list-style-image</a>
+      </li>
+                        <li>
+                          <a href="#list-style-position" class="toc-h3 toc-link" data-title="list-style-position">list-style-position</a>
+      </li>
+  </ul>
+                  </li>
+                  <li>
+                    <a href="#filters" class="toc-h2 toc-link" data-title="Filters">Filters</a>
+                    <ul class="toc-list-h3">
+                        <li>
+                          <a href="#blur" class="toc-h3 toc-link" data-title="Blur">Blur</a>
+      </li>
+                        <li>
+                          <a href="#opacity" class="toc-h3 toc-link" data-title="Opacity">Opacity</a>
+      </li>
+                        <li>
+                          <a href="#grayscale" class="toc-h3 toc-link" data-title="Grayscale">Grayscale</a>
+      </li>
+                        <li>
+                          <a href="#sepia" class="toc-h3 toc-link" data-title="Sepia">Sepia</a>
+      </li>
+                        <li>
+                          <a href="#invert" class="toc-h3 toc-link" data-title="Invert">Invert</a>
+      </li>
+                        <li>
+                          <a href="#brightness" class="toc-h3 toc-link" data-title="Brightness">Brightness</a>
+      </li>
+                        <li>
+                          <a href="#contrast" class="toc-h3 toc-link" data-title="Contrast">Contrast</a>
+      </li>
+                        <li>
+                          <a href="#saturate" class="toc-h3 toc-link" data-title="Saturate">Saturate</a>
+      </li>
+  </ul>
+                  </li>
+                  <li>
+                    <a href="#typography" class="toc-h2 toc-link" data-title="Typography">Typography</a>
+                    <ul class="toc-list-h3">
+                        <li>
+                          <a href="#text-transform" class="toc-h3 toc-link" data-title="text-transform">text-transform</a>
+      </li>
+                        <li>
+                          <a href="#text-decoration" class="toc-h3 toc-link" data-title="text-decoration">text-decoration</a>
+      </li>
+                        <li>
+                          <a href="#text-align" class="toc-h3 toc-link" data-title="text-align">text-align</a>
+      </li>
+                        <li>
+                          <a href="#line-height" class="toc-h3 toc-link" data-title="line-height">line-height</a>
+      </li>
+  </ul>
+                  </li>
+                  <li>
+                    <a href="#error-handling" class="toc-h2 toc-link" data-title="Error Handling">Error Handling</a>
+                  </li>
+                  <li>
+                    <a href="#custom-properties" class="toc-h2 toc-link" data-title="Custom Properties">Custom Properties</a>
+                    <ul class="toc-list-h3">
+                        <li>
+                          <a href="#creating-variables-inside-elements" class="toc-h3 toc-link" data-title="Creating variables inside elements">Creating variables inside elements</a>
+      </li>
+                        <li>
+                          <a href="#variables-scope" class="toc-h3 toc-link" data-title="Variables scope">Variables scope</a>
+      </li>
+                        <li>
+                          <a href="#fallback-values-for-var" class="toc-h3 toc-link" data-title="Fallback values for var()">Fallback values for var()</a>
+      </li>
+  </ul>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#html-and-css-exercises" class="toc-h1 toc-link" data-title="HTML and CSS Exercises">HTML and CSS Exercises</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#blog-markup-with-css-thoughts" class="toc-h2 toc-link" data-title="Blog Markup with CSS Thoughts">Blog Markup with CSS Thoughts</a>
+                  </li>
+                  <li>
+                    <a href="#formatting-text" class="toc-h2 toc-link" data-title="Formatting Text">Formatting Text</a>
+                  </li>
+                  <li>
+                    <a href="#tables" class="toc-h2 toc-link" data-title="Tables">Tables</a>
+                  </li>
+                  <li>
+                    <a href="#example-form" class="toc-h2 toc-link" data-title="Example Form">Example Form</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#tailwind-css-and-frameworks" class="toc-h1 toc-link" data-title="TailWind CSS and Frameworks">TailWind CSS and Frameworks</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#introduction" class="toc-h2 toc-link" data-title="Introduction">Introduction</a>
+                  </li>
+                  <li>
+                    <a href="#tailwind-first-time" class="toc-h2 toc-link" data-title="Tailwind First Time">Tailwind First Time</a>
+                  </li>
+                  <li>
+                    <a href="#tailwind-margin-padding-cheatsheet" class="toc-h2 toc-link" data-title="Tailwind Margin / Padding Cheatsheet">Tailwind Margin / Padding Cheatsheet</a>
+                  </li>
+                  <li>
+                    <a href="#tailwind-width-cheatsheet" class="toc-h2 toc-link" data-title="Tailwind Width Cheatsheet">Tailwind Width Cheatsheet</a>
+                  </li>
+                  <li>
+                    <a href="#tailwind-fonts-cheatsheet" class="toc-h2 toc-link" data-title="Tailwind Fonts Cheatsheet">Tailwind Fonts Cheatsheet</a>
+                  </li>
+                  <li>
+                    <a href="#tailwind-colors-cheatsheet" class="toc-h2 toc-link" data-title="Tailwind Colors Cheatsheet">Tailwind Colors Cheatsheet</a>
+                  </li>
+              </ul>
+          </li>
+      </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='css-basics'>CSS Basics</h1>
+
+<ul>
+<li><a href="#css-basics">CSS Basics</a>
+
+<ul>
+<li><a href="#introduction-to-css">Introduction to CSS</a></li>
+<li><a href="#adding-css-to-html-page">Adding CSS to HTML page</a></li>
+<li><a href="#selectors">Selectors</a>
+
+<ul>
+<li><a href="#basic-selectors">Basic Selectors</a></li>
+<li><a href="#combining-selectors">Combining Selectors</a></li>
+<li><a href="#grouping-selectors">Grouping Selectors</a></li>
+<li><a href="#selectors-by-following-document-tree-structure">Selectors by following Document Tree Structure</a></li>
+</ul></li>
+<li><a href="#cascade">Cascade</a></li>
+<li><a href="#specificity">Specificity</a>
+
+<ul>
+<li><a href="#specificity-calculation">Specificity Calculation</a></li>
+</ul></li>
+<li><a href="#inheritance">Inheritance</a></li>
+<li><a href="#attribute-selectors">Attribute Selectors</a></li>
+<li><a href="#pseudo-classes">Pseudo Classes</a></li>
+<li><a href="#pseudo-elements">Pseudo Elements</a></li>
+<li><a href="#colors">Colors</a></li>
+<li><a href="#units">Units</a>
+
+<ul>
+<li><a href="#pixels">Pixels</a></li>
+<li><a href="#percentages">Percentages</a></li>
+<li><a href="#relative-units">Relative Units</a></li>
+<li><a href="#viewport-units">Viewport Units</a></li>
+<li><a href="#fraction-units">Fraction Units</a></li>
+</ul></li>
+<li><a href="#url">URL()</a></li>
+<li><a href="#calc">Calc()</a></li>
+<li><a href="#backgrounds">Backgrounds</a></li>
+<li><a href="#comments">Comments</a></li>
+</ul></li>
+</ul>
+
+<h2 id='introduction-to-css'>Introduction to CSS</h2>
+
+<ul>
+<li>CSS is used to style an HTML page and the corresponding elements</li>
+<li>CSS file has 2 parts:
+
+<ol>
+<li>Selector</li>
+<li>Declaration Block</li>
+</ol></li>
+<li>Declarations are made in property / value pairs where the property selects the type and the value changes the value</li>
+<li>A CSS rule set has a selector part and a declaration
+
+<ul>
+<li>Ex.
+<code>
+p {
+font-size: 20px;
+}
+</code></li>
+</ul></li>
+<li>Can select more than one tag at a time</li>
+<li><p>For classes use &quot;.&quot; before name</p>
+
+<ul>
+<li>Ex.
+```
+.my-class {</li>
+</ul>
+
+<p>}
+```</p></li>
+<li><p>For Id us &quot;#&quot; before name</p>
+
+<ul>
+<li>Ex.
+```
+#my-id {</li>
+</ul>
+
+<p>}
+```</p></li>
+</ul>
+<h2 id='adding-css-to-html-page'>Adding CSS to HTML page</h2>
+<ul>
+<li>CSS can be added to an HTML page in 3 ways:
+
+<ol>
+<li>Using the <code>&lt;link&gt;</code> tag
+
+<ul>
+<li>Adds an external CSS file rules to the HTML page</li>
+<li>Ex.
+<code>
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;myfile.css&quot;&gt;
+</code></li>
+</ul></li>
+<li>Using the <code>&lt;style&gt;</code> tag
+
+<ul>
+<li>Allow for adding some custom CSS tags to an HTML file</li>
+<li>Ex.
+<code>
+&lt;style&gt;
+    CSS Rules
+&lt;/style&gt;
+</code></li>
+</ul></li>
+<li>Inline styles
+
+<ul>
+<li>Can add specific inline styling to specific HTML elements</li>
+<li>Ex.
+<code>
+&lt;div style=&quot;background-color: yellow&quot;&gt;...&lt;/div&gt;
+</code></li>
+</ul></li>
+</ol></li>
+</ul>
+<h2 id='selectors'>Selectors</h2>
+<ul>
+<li>Selectors is the idea of selecting elements in the HTML tree to target for the CSS declaration rules</li>
+<li>Selectors can range from very basic to very specific</li>
+</ul>
+<h3 id='basic-selectors'>Basic Selectors</h3>
+<ul>
+<li>Basic selectors entail selecting a single HTML element either by tag, class name, or id</li>
+<li>Ex. To target <code>&lt;p&gt;</code> elements,
+<code>
+p {
+font-size: 20px;
+}
+</code></li>
+<li>The same works for classes and Id</li>
+<li>Class
+<code>
+.class-name {
+rules...
+}
+</code></li>
+<li>Ids
+<code>
+#id-name {
+rules...
+}
+</code></li>
+</ul>
+<h3 id='combining-selectors'>Combining Selectors</h3>
+<ul>
+<li>Can target an element by class-name or id</li>
+<li><p>Ex.
+<code>
+    &lt;p class=&quot;dog-name&gt;
+        Roger
+    &lt;/p&gt;
+    ...
+    p.dog-name {
+        rules...
+    }
+</code></p></li>
+<li><p>For targetting multiple classes, combine the class-names in the selector without spaces</p></li>
+<li><p>Ex.
+<code>
+.dog-name.roger {
+rules...
+}
+</code></p></li>
+</ul>
+<h3 id='grouping-selectors'>Grouping Selectors</h3>
+<ul>
+<li>Can combine selectors so that the rules apply to multiple elements by having a comma in between</li>
+<li>Ex.
+<code>
+p, .dog-name {
+color: yellow;
+}
+</code></li>
+</ul>
+<h3 id='selectors-by-following-document-tree-structure'>Selectors by following Document Tree Structure</h3>
+<ul>
+<li>Use spaces in between to target children of a targeted element</li>
+<li>Ex.
+<code>
+p span {
+color: yellow;
+}
+</code></li>
+<li>This targets span elements that are children of p elements</li>
+</ul>
+<h2 id='cascade'>Cascade</h2>
+<ul>
+<li>Cascading is an important topic within the realm of CSS in styling HTML pages</li>
+<li>There is a certain order and priority that gets applied for rules because sometimes there can be conflicting rules</li>
+<li>What it considers in the algorithm to figure the cascading are:
+
+<ul>
+<li>specificity</li>
+<li>importance</li>
+<li>inheritance</li>
+<li>order in the file</li>
+</ul></li>
+</ul>
+<h2 id='specificity'>Specificity</h2>
+<ul>
+<li>Specificity is determined by a system where the more specific rule will win
+
+<ul>
+<li>If two rules have the same specificity, the one that appears later in the file wins</li>
+</ul></li>
+</ul>
+<h3 id='specificity-calculation'>Specificity Calculation</h3>
+<ul>
+<li>Specificity is calculated by utilizing a 4 number system</li>
+<li>There are 4 slots and all of them starts at 0
+
+<ul>
+<li>0 0 0 0</li>
+<li>The slot at the leftmost is the most important and the rightmost is the least important</li>
+<li>Ex. 1 0 0 0 is higher specificity than 0 1 0 0</li>
+</ul></li>
+<li>Slot 1:
+
+<ul>
+<li>Slot 1 is incremented when there is an element selector</li>
+<li>Ex.
+<code>
+p {}                    /* 0 0 0 1 */
+span {}                 /* 0 0 0 1 */
+p span {}               /* 0 0 0 2 */
+p &gt; span {}             /* 0 0 0 2 */
+div p &gt; span {}         /* 0 0 0 3 */
+</code></li>
+</ul></li>
+<li>Slot 2:
+
+<ul>
+<li>Slot 2 is incremented by:
+
+<ol>
+<li>class selectors</li>
+<li>pseudo-class selectors</li>
+<li>attribute selectors</li>
+</ol></li>
+<li>Ex.
+<code>
+.name {}                /* 0 0 1 0 */
+.users .name {}         /* 0 0 2 0 */
+[href$=&#39;.pdf&#39;] {}       /* 0 0 1 0 */
+:hover {}               /* 0 0 1 0 */
+</code></li>
+</ul></li>
+<li>Slot 3:
+
+<ul>
+<li>Slot 3 is incremented by id selectors</li>
+<li>Ex.
+<code>
+#name {}                    /* 0 1 0 0 */
+.user #name {}              /* 0 1 1 0 */
+#name span {}               /* 0 1 0 1 */
+</code></li>
+</ul></li>
+<li><p>Slot 4:</p>
+
+<ul>
+<li>Slot 4 is incremented by inline styling</li>
+<li>Inline styling will have the most precedence over any rule </li>
+<li>Ex.
+<code>
+&lt;p style=&quot;color: red&quot;&gt;Test&lt;/p&gt; /* 1 0 0 0 */
+</code></li>
+</ul></li>
+<li><p>!important can be used to override any styling precedence</p></li>
+<li><p>Ex.
+<code>
+p {
+font-size: 20px!important;
+}
+</code></p></li>
+<li><p>By making this rule, this will take precendence over any CSS rule except for those that also have !important, which in that case will resolve using the specificity rules above</p></li>
+<li><p>Generally its better to not utilize id rules and !important as this can create issues if multiple CSS files are utilized in one HTML page</p></li>
+<li><p>Rather, more specific rules should be creating by combining selectors</p></li>
+<li><p>!important should only be utilized to see some kind of effect when testing</p></li>
+</ul>
+<h2 id='inheritance'>Inheritance</h2>
+<ul>
+<li>Some CSS properties inherit from parent to child without having to explicitly state the rule in the child while others don&#39;t</li>
+<li>For example, &quot;font-family&quot; gets inherited from the parent to child by default but &quot;background-color&quot; does not get inherited from parent to child</li>
+<li>To force properties to inherit, create a property rule in the parent and then have &quot;inherit&quot; as the value in the child</li>
+<li>Ex.
+<code>
+body {
+background-color: yellow;
+}
+p {
+background-color: inherit;
+}
+</code></li>
+<li>There are also methods to prevent inheriting in the children or reverting</li>
+</ul>
+<h2 id='attribute-selectors'>Attribute Selectors</h2>
+<ul>
+<li>There are also ways to specify selectors to target HTML elements by their attributes</li>
+<li>It is possible to target a certain element tag with a id attribute utilizing the &quot;[]&quot; syntax</li>
+<li>Ex.
+<code>
+p[id] {
+rules...
+}
+</code></li>
+<li>This will select all <code>&lt;p&gt;</code> elements that have an &quot;id&quot; attribute regardless of value</li>
+<li>Attribute selectors can also be matching to some regex pattern or exact</li>
+<li>Ex.
+<code>
+p[id=&quot;my-id] {
+rules...
+}
+</code></li>
+<li>In this case the CSS will only apply when the element is a <code>&lt;p&gt;</code> tag and the id attribute matches that string</li>
+</ul>
+<h2 id='pseudo-classes'>Pseudo Classes</h2>
+<ul>
+<li>Pseudo classes are predefined keywords that are used to select elements based on their state or to target a specific child</li>
+<li>One of the most popular ones that are used is &quot;:hover&quot;
+
+<ul>
+<li>This targets an element if it is hovered over</li>
+</ul></li>
+<li>Ex. When links are clicked, they switch state to &quot;:active&quot; and &quot;:visited&quot;
+<code>
+a,
+a:visited,
+a:active {
+color: yellow;
+}
+</code></li>
+<li>Can write the CSS selector utilizing pseudo-classes to make sure that the CSS stays regardless of the element&#39;s state</li>
+<li>:nth-child() is another option as it allows for targeting odd and even children
+
+<ul>
+<li>Often utilized to style lists such that the style is different for adjacent children</li>
+</ul></li>
+</ul>
+<h2 id='pseudo-elements'>Pseudo Elements</h2>
+<ul>
+<li>Used to style a specific part of an element</li>
+<li>Syntax starts with &quot;::&quot;</li>
+<li>The most common one are &quot;before&quot; and &quot;after&quot; which allow you to add content before or after an element
+
+<ul>
+<li>Most commonly used for adding things like icons</li>
+<li>Must specify the content property before inserting</li>
+</ul></li>
+<li>Ex.
+```
+p::before {
+content: url(/myimage.png);
+}</li>
+</ul>
+
+<p>.myElement::before {
+    content: &quot;Hey Hey!&quot;;
+}
+```</p>
+<h2 id='colors'>Colors</h2>
+<ul>
+<li>Colors can be added to HTML elements through:
+
+<ul>
+<li>color</li>
+<li>background-color</li>
+<li>border-color</li>
+</ul></li>
+<li>There are different ways to set colors:
+
+<ul>
+<li>Named colors - Something like &quot;blue&quot; that CSS has predefined to work when trying to set the color</li>
+<li>RGB / RGBA - allows you to pick the rgb and alpha value
+
+<ul>
+<li>These values go from 0 - 255</li>
+<li>Ex. rgb(0, 0, 0) will be black</li>
+<li>The rgba() allows you to add transparency through the last channel</li>
+</ul></li>
+<li>Hexadecimal Notation - in the form of &quot;#ffffff&quot; or &quot;#fff&quot; 
+
+<ul>
+<li>Express the numbers in 3 two digit numbers which range from 0 - 15 (0 - f)</li>
+<li>Can also add two extra digits for the alpha channel at the end</li>
+</ul></li>
+<li>HSL / HSLA - For hue, saturation, and lightness
+
+<ul>
+<li>This is the same as RGB / RGBA but it is just in another format</li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id='units'>Units</h2>
+<ul>
+<li>Units are standardized definitions in CSS that allow to easily set lengths, paddings, margins, etc.</li>
+</ul>
+<h3 id='pixels'>Pixels</h3>
+<ul>
+<li>Pixels are the most widely utilized measurement unit</li>
+<li>It doesn&#39;t exactly correspond to 1 exact pixel because of the difference in retinas of devices, but allows for a easy, standardized measurement</li>
+<li>Ex.
+<code>
+p {
+margin-top: 20px;
+}
+</code></li>
+</ul>
+<h3 id='percentages'>Percentages</h3>
+<ul>
+<li>Percentages allow you to define properties based on the parent&#39;s value
+<code>
+.parent {
+width: 400px
+}
+.child {
+width: 50%; /* = 200px */
+}
+</code></li>
+</ul>
+<h3 id='relative-units'>Relative Units</h3>
+<ul>
+<li>Commonly used are relative units that are relative to a font-size</li>
+<li>&quot;em&quot; is the value assigned to that element&#39;s font-size</li>
+<li>&quot;rem&quot; is the same as &quot;em&quot; but it measures the root element&#39;s font-size
+
+<ul>
+<li>Allows for consistency across the entire document</li>
+</ul></li>
+</ul>
+<h3 id='viewport-units'>Viewport Units</h3>
+<ul>
+<li>&quot;vw&quot; is the viewport width which takes a percentage of the viewport width
+
+<ul>
+<li>Ex. 50vw means 50% of the viewport width</li>
+</ul></li>
+<li>&quot;vh&quot; is the viewport height which takes a percentage of the viewport height</li>
+<li>&quot;vmin&quot; is the viewport minimum that represents the minimum between the height and width in terms of percentage
+
+<ul>
+<li>Ex. 30vmin is the 30% of the current width or height, whatever is smaller</li>
+</ul></li>
+<li>&quot;vmax&quot; is the same as &quot;vmin&quot; just maximum</li>
+<li>Viewport units are not inherited, meaning to set the height based on a viewport percentage, the parent&#39;s height does not need to be specified</li>
+</ul>
+<h3 id='fraction-units'>Fraction Units</h3>
+<ul>
+<li>&quot;fr&quot; are fraction units that are utilized in CSS Grids to divide space into fractions</li>
+</ul>
+<h2 id='url'>URL()</h2>
+<ul>
+<li>URLs are used to load resources such as images, gifs, mp4s, sound, etc.</li>
+<li>Ex.
+<code>
+div {
+background-image: url(test.png);
+}
+</code></li>
+<li>The url provided can be a relative URL, external absolute URL, or can find from the root of the domain of the CSS</li>
+</ul>
+<h2 id='calc'>Calc()</h2>
+<ul>
+<li>calc() function allows for performing basic math operations on values
+
+<ul>
+<li>Especially useful for adding or subtracting a length from a percentage</li>
+<li>Ex.
+<code>
+div {
+max-width: calc(80% - 100px)
+}
+</code></li>
+</ul></li>
+<li>Returns a &quot;length&quot; value so it can be used anywhere that expects a pixel value</li>
+<li>Ex.</li>
+</ul>
+
+<style>
+    .calc {
+        background-color: cyan;
+        width: calc(80% - 200px);
+    }
+</style>
+
+<p class="calc">
+    Width of element defined using the calc() function
+</p>
+
+<h2 id='backgrounds'>Backgrounds</h2>
+
+<ul>
+<li>Backgrounds of elements can be set with numerous properties</li>
+<li>Most popular are:
+
+<ul>
+<li>background-color</li>
+<li>background-image</li>
+<li>background-attachment</li>
+<li>background-size</li>
+<li>background-repeat</li>
+</ul></li>
+<li>Ex.</li>
+</ul>
+
+<style>
+    .background-example {
+        background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#F3F333));
+        background: linear-gradient(#ffffff, #F3F333);
+        width: 100%;
+        height: 100px;
+    }
+</style>
+
+<p class="background-example">
+    Background example with linear gradient
+</p>
+
+<h2 id='comments'>Comments</h2>
+
+<ul>
+<li>For commenting in CSS, only block comments are allowed</li>
+<li>The syntax is <code>/*...*/</code></li>
+<li>Helps since this allowed you to comment out multiple lines until <code>*/</code> is reached</li>
+<li>CSS doesn&#39;t have inline comments so only block comments can be used</li>
+</ul>
+
+<h1 id='more-css'>More CSS</h1>
+
+<!-- TOC -->
+
+<ul>
+<li><a href="#more-css">More CSS</a>
+
+<ul>
+<li><a href="#box-model">Box Model</a></li>
+<li><a href="#border">Border</a>
+
+<ul>
+<li><a href="#border-style">Border-style</a></li>
+<li><a href="#border-width">Border-width</a></li>
+<li><a href="#border-color">Border-color</a></li>
+<li><a href="#border-radius">Border-radius</a></li>
+</ul></li>
+<li><a href="#margin">Margin</a></li>
+<li><a href="#padding">Padding</a></li>
+<li><a href="#box-sizing">Box Sizing</a></li>
+<li><a href="#display">Display</a>
+
+<ul>
+<li><a href="#inline">Inline</a></li>
+<li><a href="#block">Block</a></li>
+<li><a href="#none">None</a></li>
+</ul></li>
+<li><a href="#positioning">Positioning</a>
+
+<ul>
+<li><a href="#static">Static</a></li>
+<li><a href="#relative">Relative</a></li>
+<li><a href="#absolute">Absolute</a></li>
+<li><a href="#fixed">Fixed</a></li>
+<li><a href="#sticky">Sticky</a></li>
+</ul></li>
+<li><a href="#floating">Floating</a>
+
+<ul>
+<li><a href="#clearing">Clearing</a></li>
+</ul></li>
+<li><a href="#tables">Tables</a></li>
+<li><a href="#centering">Centering</a></li>
+<li><a href="#lists">Lists</a>
+
+<ul>
+<li><a href="#list-style-type">list-style-type</a></li>
+<li><a href="#list-style-image">list-style-image</a></li>
+<li><a href="#list-style-position">list-style-position</a></li>
+</ul></li>
+<li><a href="#filters">Filters</a>
+
+<ul>
+<li><a href="#blur">Blur</a></li>
+<li><a href="#opacity">Opacity</a></li>
+<li><a href="#grayscale">Grayscale</a></li>
+<li><a href="#sepia">Sepia</a></li>
+<li><a href="#invert">Invert</a></li>
+<li><a href="#brightness">Brightness</a></li>
+<li><a href="#contrast">Contrast</a></li>
+<li><a href="#saturate">Saturate</a></li>
+</ul></li>
+<li><a href="#typography">Typography</a>
+
+<ul>
+<li><a href="#text-transform">text-transform</a></li>
+<li><a href="#text-decoration">text-decoration</a></li>
+<li><a href="#text-align">text-align</a></li>
+<li><a href="#line-height">line-height</a></li>
+</ul></li>
+<li><a href="#error-handling">Error Handling</a></li>
+<li><a href="#custom-properties">Custom Properties</a>
+
+<ul>
+<li><a href="#creating-variables-inside-elements">Creating variables inside elements</a></li>
+<li><a href="#variables-scope">Variables scope</a></li>
+<li><a href="#fallback-values-for-var">Fallback values for var()</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+<!-- /TOC -->
+
+<h2 id='box-model'>Box Model</h2>
+
+<ul>
+<li>In HTML and CSS, every element is essentially a box</li>
+<li>The box model explains how elements are presented and manipulated in CSS</li>
+<li>There are 4 areas in the CSS box model
+
+<ul>
+<li>From inside to outside</li>
+<li>Content Area</li>
+<li>Padding Area</li>
+<li>Border Area</li>
+<li>Margin Area</li>
+</ul></li>
+<li>Ex.</li>
+</ul>
+
+<p><img src="resources/BoxModel-f1ca7bfb.png" title="Box Model" alt="Box Model Image" /></p>
+
+<ul>
+<li>Setting width or height sets the content area not the padding, border, or margin areas</li>
+</ul>
+
+<h2 id='border'>Border</h2>
+
+<ul>
+<li>The border is the thin area between the padding and margin</li>
+<li>Essentially, editing this area allows for editing the perimeter of the element</li>
+<li>Can work on borders using these properties:<br>
+
+<ol>
+<li>border-style</li>
+<li>border-color</li>
+<li>border-width</li>
+<li>border-radius</li>
+</ol></li>
+<li>Can set images for borders with border-image</li>
+</ul>
+
+<h3 id='border-style'>Border-style</h3>
+
+<ul>
+<li><strong>border-style</strong> property allows for picking the style of border
+
+<ul>
+<li>Ex.
+
+<ul>
+<li>dotted</li>
+<li>dashed</li>
+<li>solid</li>
+<li>double</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p><img src="resources/Borders-8afc358f.png" title="Border styles" alt="Borders Image" /></p>
+
+<h3 id='border-width'>Border-width</h3>
+
+<ul>
+<li><strong>border-width</strong> allows for specifying the width of hte lines of the border
+
+<ul>
+<li>word values are:
+
+<ul>
+<li>thin</li>
+<li>medium</li>
+<li>thick</li>
+</ul></li>
+<li>length values using &quot;em&quot; or &quot;px&quot; can also be used</li>
+</ul></li>
+</ul>
+
+<h3 id='border-color'>Border-color</h3>
+
+<ul>
+<li><strong>border-color</strong> is utilized to set the color of the border</li>
+<li>Default color is the element&#39;s text color</li>
+</ul>
+
+<h3 id='border-radius'>Border-radius</h3>
+
+<ul>
+<li><strong>border-radius</strong> is used to set rounded corners in the border</li>
+<li><p>Value that is passed is the radius of the circle on the corners used to round the border</p></li>
+<li><p>Ex.</p></li>
+</ul>
+
+<style>
+    .border {
+        width: 100%;
+        height: 100px;
+        border-style: dotted solid dashed double;
+        border-radius: 10px;
+        border-color: red;
+    }
+</style>
+
+<p class="border">
+    Border example with border-radius, border-width, border style, and border-color
+</p>
+
+<h2 id='margin'>Margin</h2>
+
+<ul>
+<li>A CSS property that is used to add space around an element</li>
+<li>Margin adds space outside an element border</li>
+<li>Padding on the other hand adds space inside an element border</li>
+<li>Margin have 4 properties that can be specified:
+
+<ol>
+<li>margin-top</li>
+<li>margin-right</li>
+<li>margin-bottom</li>
+<li>margin-left</li>
+</ol></li>
+<li>margin is typically utilized to add small amounts of spacing or for centering elements by using &quot;auto&quot;
+
+<ul>
+<li>Ex.
+<code>
+.class {
+margin: 0 auto
+}
+</code></li>
+</ul></li>
+<li>This makes the top and bottom margin 0 px while letting the browser automatically decide the spacing of the left and right margins for the element</li>
+<li>Ex.</li>
+</ul>
+
+<style>
+    .margin {
+        margin: 0 auto;
+        width: 300px;
+        height: 100px
+    }
+</style>
+
+<p class="margin">
+    Some Test for margin centering using "auto"
+</p>
+
+<ul>
+<li>Margin is also allowed to have negative values on the properties which makes it extend the opposite way</li>
+</ul>
+
+<h2 id='padding'>Padding</h2>
+
+<ul>
+<li>Padding is the same as margin except that it adds space to the area inside the element border</li>
+<li>Margin adds space outside the element border</li>
+<li>Padding adds space inside the element border</li>
+<li>Similar to margin, it has 4 properties:
+
+<ol>
+<li>padding-top</li>
+<li>padding-right</li>
+<li>padding-bottom</li>
+<li>padding-left</li>
+</ol></li>
+<li>Ex.</li>
+</ul>
+
+<style>
+    .padding {
+        width: 300px;
+        height: 300px;
+        padding: 30px 30px;
+        background-color: orange;
+    }
+</style>
+
+<p class="padding">
+    Some text to demonstrate padding
+</p>
+
+<h2 id='box-sizing'>Box Sizing</h2>
+
+<ul>
+<li>By default, the browsers calculate width and height of an element before the padding, border, and margin</li>
+<li>It gets complicated so there is a &quot;box-sizing&quot; property that allows for 2 property values:
+
+<ol>
+<li>border-box</li>
+<li>content-box</li>
+</ol></li>
+<li>&quot;border-box&quot; changes the box-sizing such that the width and height calculation include the padding and the border</li>
+<li>Recommended to &quot;reset&quot; the CSS for every element to this setting since it is more intuitive
+
+<ul>
+<li>Ex.
+<code>
+*, *::before, *::after {
+box-sizing: border-box;
+}
+</code></li>
+</ul></li>
+<li>Ex.</li>
+</ul>
+
+<style>
+    .border-box {
+        width: 300px;
+        height: 100px;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        background-color: pink;
+    }
+</style>
+
+<p class="border-box">
+    Example testing out "border-box"
+</p>
+
+<h2 id='display'>Display</h2>
+
+<ul>
+<li>&quot;Display&quot; property determines how the element is displayed by the browser</li>
+<li>3 types of display elements (excluding &quot;grid&quot;, &quot;flex&quot;, &quot;table&quot;)
+
+<ol>
+<li>block</li>
+<li>inline</li>
+<li>none</li>
+</ol></li>
+</ul>
+
+<h3 id='inline'>Inline</h3>
+
+<ul>
+<li>With &quot;inline&quot; as the property value, the elements don&#39;t have any margin or padding applied as well as height and width</li>
+<li>It appears &quot;inline&quot; with the elements that precede and come after it</li>
+</ul>
+
+<h3 id='block'>Block</h3>
+
+<ul>
+<li>Some elements are automatically set as &quot;block&quot; elements by the browser</li>
+<li>Block elements are those that take up 100% of the width of the screen</li>
+<li>They also stack on top of each other when placed one after another </li>
+<li>The width and height properties are actually utilized and can also set the margin and padding</li>
+</ul>
+
+<h3 id='none'>None</h3>
+
+<ul>
+<li>Display &quot;none&quot; hides the visibility of the element on the page</li>
+<li>The element will still be in the HTML code, but will not be rendered by the browser</li>
+</ul>
+
+<h2 id='positioning'>Positioning</h2>
+
+<ul>
+<li>Property that determines where elements appear on the screen and how they appear</li>
+<li>Can have 5 values:
+
+<ol>
+<li>static</li>
+<li>relative</li>
+<li>absolute</li>
+<li>fixed</li>
+<li>sticky</li>
+</ol></li>
+</ul>
+
+<h3 id='static'>Static</h3>
+
+<ul>
+<li>This is the default setting that follows the normal page structure created from and HTML document</li>
+</ul>
+
+<h3 id='relative'>Relative</h3>
+
+<ul>
+<li>Allows for positioning using 4 properties:
+
+<ol>
+<li>top</li>
+<li>left</li>
+<li>right</li>
+<li>bottom</li>
+<li>Called offset properties tha accept a length as value</li>
+</ol></li>
+<li>Position relative allows for positioning the element relative to the parent element that is containing it</li>
+</ul>
+
+<p><img src="resources/PositionRelative-611318fa.png" title="Position Relative" alt="Relative Position Image" /></p>
+
+<ul>
+<li>Here we can see that the .box class (yellow) can be specified its position relative to the parent container which is the pink box</li>
+</ul>
+
+<h3 id='absolute'>Absolute</h3>
+
+<ul>
+<li>Position absolute takes the element outside of the normal HTML flow and allows for manual positioning</li>
+<li>Only the (x, y) starting point is preserved
+
+<ul>
+<li>The starting point is the starting point of the closest container that is not static</li>
+</ul></li>
+</ul>
+
+<p><img src="resources/PositionAbsolute-9bcbb718.png" title="Position Absolute" alt="Absolute Position Image" /></p>
+
+<h3 id='fixed'>Fixed</h3>
+
+<ul>
+<li>Position fixed is the same as position absolute except that the starting coordinates (x, y) are always positioned relative to the window
+instead of the first non-static container</li>
+<li>Also fixed elements are not affected by scrolling, they will remain on the page even if scrolling occurs</li>
+</ul>
+
+<h3 id='sticky'>Sticky</h3>
+
+<ul>
+<li>Position sticky is the same as fixed except that it stays at the top of the screen when the screen&#39;s scrolling has reached that element&#39;s scrolling point</li>
+<li>This means that it will act like static until its scrolling point is reached and then act like fixed at the top of the screen if the user keeps scrolling</li>
+</ul>
+
+<h2 id='floating'>Floating</h2>
+
+<ul>
+<li>Floating allows you to remove an element from the normal page flow and used to be the old way to create &quot;modern&quot; layouts
+
+<ul>
+<li>Kind of not utilized as much because of &quot;Grid&quot; and &quot;Flexbox&quot;</li>
+</ul></li>
+<li>Supports 3 values:
+
+<ol>
+<li>left</li>
+<li>right</li>
+<li>none (default)</li>
+</ol></li>
+<li>Normally, the browser renders things like imgs and spans inline together one after another, meaning imgs will show in the middle of the text or not formatted
+
+<ul>
+<li>Can be fixed with floats</li>
+<li>Ex.
+<img src="resources/Floating-aef239ff.png" title="Floating" alt="Floating Image" /></li>
+</ul></li>
+<li>Floated elements are removed from the normal flow of the page and the content flows around it</li>
+</ul>
+
+<h3 id='clearing'>Clearing</h3>
+
+<ul>
+<li>Floating multiple elements will make them just stack next to each other horizontally
+
+<ul>
+<li>If space runs out at it will start a new line</li>
+</ul></li>
+<li>There is a property called &quot;clear&quot; that remedy&#39;s this and allows for horizontally floated elements to be stacked vertically</li>
+<li>Ex.
+<img src="resources/Clearing-c43d483d.png" title="Clearing" alt="Clearing Image" /></li>
+<li>For clearing use:
+
+<ul>
+<li>&quot;left&quot; to clear left floats</li>
+<li>&quot;right&quot; to clear right floats</li>
+<li>&quot;both&quot; to clear both left and right flaots</li>
+<li>&quot;none&quot; (default)</li>
+</ul></li>
+</ul>
+
+<h2 id='tables'>Tables</h2>
+
+<ul>
+<li>Tables used to be heavily utilized to create fancy page layouts but are not really utilized except for creating tables because of &quot;grid&quot; and &quot;flexbox&quot;</li>
+<li>Can easily style every other row to have a different color utilizing :nth_child(odd) or :nth_child(even) selector</li>
+<li>Ex.</li>
+</ul>
+
+<style>
+    table, th, td {
+        border: 1px solid #333;
+    }
+
+    tbody tr:nth-child(odd) {
+        background-color: #af47ff;
+    }
+</style>
+
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Flavio</th>
+      <td>36</td>
+    </tr>
+    <tr>
+      <th scope="row">Roger</th>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th scope="row">Syd</th>
+      <td>10</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id='centering'>Centering</h2>
+
+<ul>
+<li>Centering is normally a confusing thing without the aid of CSS grid and Flexbox</li>
+<li>For centering horizontally:
+
+<ul>
+<li>For text:
+
+<ul>
+<li>Just set &quot;text-align&quot; to center which automatically centers all text</li>
+<li>Ex.
+<code>
+p {
+text-align: center
+}
+</code></li>
+</ul></li>
+<li>For block elements:
+
+<ul>
+<li>Set the width of the element and then set margin to &quot;0 auto&quot;</li>
+<li>Ex.
+<code>
+div {
+width: 50%;
+margin: 0 auto;
+}
+</code></li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h2 id='lists'>Lists</h2>
+
+<ul>
+<li>Lists can be styled by CSS using the following properties:
+
+<ul>
+<li>list-style-type</li>
+<li>list-style-image</li>
+<li>list-style-position</li>
+</ul></li>
+</ul>
+
+<h3 id='list-style-type'>list-style-type</h3>
+
+<ul>
+<li>&quot;list-style-type&quot; is used to set a predefined marker such as:
+
+<ul>
+<li>&quot;square&quot;</li>
+<li>&quot;disc&quot;</li>
+<li>&quot;circle&quot;</li>
+</ul></li>
+</ul>
+
+<h3 id='list-style-image'>list-style-image</h3>
+
+<ul>
+<li>&quot;list-style-image&quot; can be used to bring in a custom image marker</li>
+</ul>
+
+<h3 id='list-style-position'>list-style-position</h3>
+
+<ul>
+<li>&quot;list-style-position&quot; lets you add a marker inside or outside (default) the list content</li>
+<li><p>This brinsg the marker in the flow of the page instead of outside of it</p></li>
+<li><p>Ex. Using the list-style-type = circle and list-style-posion = inside</p></li>
+</ul>
+
+<style>
+    .li-custom {
+        list-style-type: circle;
+        list-style-position: inside;
+    }
+</style>
+
+<ul>
+    <li class="li-custom">
+        <span>item</span>
+    </li>
+    <li class="li-custom">
+        <span>item</span>
+    </li>
+    <li class="li-custom">
+        <span>item</span>
+    </li>
+    <li class="li-custom">
+        <span>item</span>
+    </li>
+</ul>
+
+<h2 id='filters'>Filters</h2>
+
+<ul>
+<li>Filters allow for &quot;photoshop&quot; like operations onto the elements</li>
+<li>Normally in photoshop it gets applied to only images, but it can be applied to any element</li>
+<li>The different filter values are:
+
+<ul>
+<li>blur()</li>
+<li>opacity()</li>
+<li>grayscale()</li>
+<li>sepia()</li>
+<li>invert()</li>
+<li>brightness()</li>
+<li>saturate()</li>
+</ul></li>
+</ul>
+
+<h3 id='blur'>Blur</h3>
+
+<ul>
+<li>Bluring merges the pixels together to blur what gets rendered</li>
+<li>Pass in a length value that specifies the blur radius</li>
+<li>Ex.</li>
+</ul>
+
+<style>
+    .filterblur {
+        -webkit-filter: blur(2px);
+                filter: blur(2px);
+    }
+</style>
+
+<div>
+    <img class="filterblur" src="resources/coffeefilter-97506d61.jpg" />
+</div>
+
+<h3 id='opacity'>Opacity</h3>
+
+<ul>
+<li>Takes a value from 0 - 1 or percentage that determines the image transparency</li>
+<li>There is an &quot;opacity&quot; property, but setting opacity in this manner is better because some implementations are hardware accelerated</li>
+<li>Ex.</li>
+</ul>
+
+<style>
+    .filteropacity {
+        -webkit-filter: opacity(0.4);
+                filter: opacity(0.4);
+    }
+</style>
+
+<div>
+    <img class="filteropacity" src="resources/coffeefilter-97506d61.jpg" />
+</div>
+
+<h3 id='grayscale'>Grayscale</h3>
+
+<ul>
+<li>Takes a value from 0 - 1 or 0% - 100% which determines how gray the element becomes</li>
+<li>Ex.</li>
+</ul>
+
+<style>
+    .filtergrayscale {
+        -webkit-filter: grayscale(1.0);
+                filter: grayscale(1.0);
+    }
+</style>
+
+<div>
+    <img class="filtergrayscale" src="resources/coffeefilter-97506d61.jpg" />
+</div>
+
+<h3 id='sepia'>Sepia</h3>
+
+<ul>
+<li>Takes a value from 0 - 1 or 0% - 100% which determines how much of the sepia filter gets added</li>
+<li>Ex.</li>
+</ul>
+
+<style>
+    .filtersepia {
+        -webkit-filter: sepia(1.0);
+                filter: sepia(1.0);
+    }
+</style>
+
+<div>
+    <img class="filtersepia" src="resources/coffeefilter-97506d61.jpg" />
+</div>
+
+<h3 id='invert'>Invert</h3>
+
+<ul>
+<li>Takes a value from 0 - 1 or 0% - 100% that determines the amount of inversion</li>
+<li>0.5 or 50% of inversion will always result in a gray image because 50% is in the middle of the color wheel</li>
+<li>Ex.</li>
+</ul>
+
+<style>
+    .filterinvert {
+        -webkit-filter: invert(1.0);
+                filter: invert(1.0);
+    }
+</style>
+
+<div>
+    <img class="filterinvert" src="resources/coffeefilter-97506d61.jpg" />
+</div>
+
+<h3 id='brightness'>Brightness</h3>
+
+<ul>
+<li>Takes a value from 0 - 1 or 0% - 100% that determines how bright the image is and can reach a total white element greater than 100%</li>
+<li>Ex.</li>
+</ul>
+
+<style>
+    .filterbrightness {
+        -webkit-filter: brightness(0.2);
+                filter: brightness(0.2);
+    }
+</style>
+
+<div>
+    <img class="filterbrightness" src="resources/coffeefilter-97506d61.jpg" />
+</div>
+
+<h3 id='contrast'>Contrast</h3>
+
+<ul>
+<li>Takes a value from 0 - 1 or 0% - 100% that adds contrast to the image</li>
+<li>Values greater than 100% adds more contrast to the image</li>
+<li>Ex.</li>
+</ul>
+
+<style>
+    .filtercontrast {
+        -webkit-filter: contrast(2.0);
+                filter: contrast(2.0);
+    }
+</style>
+
+<div>
+    <img class="filtercontrast" src="resources/coffeefilter-97506d61.jpg" />
+</div>
+
+<h3 id='saturate'>Saturate</h3>
+
+<ul>
+<li>Takes in a value from 0 - 1 or 0% - 100% that alters the saturation of the image where 100% gives an unchanged image and anything more than 100% adds more saturation</li>
+<li>Ex.</li>
+</ul>
+
+<style>
+    .filtersaturation {
+        -webkit-filter: saturate(3.0);
+                filter: saturate(3.0);
+    }
+</style>
+
+<div>
+    <img class="filtersaturation" src="resources/coffeefilter-97506d61.jpg" />
+</div>
+
+<h2 id='typography'>Typography</h2>
+
+<ul>
+<li>There are some CSS properties that get applied to typography</li>
+<li>Here are a few of them:
+
+<ul>
+<li>text-transform</li>
+<li>text-decoration</li>
+<li>text-align</li>
+<li>line-height</li>
+</ul></li>
+</ul>
+
+<h3 id='text-transform'>text-transform</h3>
+
+<ul>
+<li>Allows for transforming the case of the text</li>
+<li>There are 4 possible values:
+
+<ol>
+<li>Capitalize - capitalizes the first letter of each word</li>
+<li>Uppercase - makes all of the lettrs uppercasee</li>
+<li>Lowercase - makes all of the letters lowercase</li>
+<li>None - applies no changes but can override parent&#39;s text-transform styles to prevent inheriting</li>
+</ol></li>
+</ul>
+
+<h3 id='text-decoration'>text-decoration</h3>
+
+<ul>
+<li>Used to add decorations to the text</li>
+<li>Can be combined with additional decorations and color </li>
+</ul>
+
+<style>
+    .text-deco {
+        -webkit-text-decoration: underline wavy red;
+                text-decoration: underline wavy red;
+    }
+</style>
+
+<p class="text-deco">
+    Example with text-decoration "underline wavy red"
+</p>
+
+<h3 id='text-align'>text-align</h3>
+
+<ul>
+<li>Changes where the text starts or the origin (0, 0) of the box that contains it</li>
+<li>Possible values are:
+
+<ul>
+<li>start</li>
+<li>end</li>
+<li>left</li>
+<li>center</li>
+<li>justify</li>
+</ul></li>
+<li>Ex.</li>
+</ul>
+
+<style>
+    .text-al {
+        text-align: center;
+    }
+</style>
+
+<p class="text-al">
+    Example with text-align "center"
+</p>
+
+<h3 id='line-height'>line-height</h3>
+
+<ul>
+<li>Allows you to change the height of the spacing between each line</li>
+</ul>
+
+<h2 id='error-handling'>Error Handling</h2>
+
+<ul>
+<li>Error handling in CSS is different from that of traditional languages such as Javascript</li>
+<li>Normally in languages like Javascript, when an error is reached, the program stops and then an error message is printed out
+
+<ul>
+<li>In CSS, the line that is errored is skipped and the next readable line is skipped as well</li>
+</ul></li>
+<li>Ex.
+<code>
+p {
+font-size: 20px
+color: black;
+border: 1px solid black;
+}
+</code></li>
+<li>Here font-size and color are skipped, but the border rule is kept</li>
+</ul>
+
+<h2 id='custom-properties'>Custom Properties</h2>
+
+<ul>
+<li>CSS allows for defining variables, but they work a bit differently than traditional variables such as those in Javascript</li>
+<li>Setting variables centralized in a file is useful because it allows for setting consistent definitions across all CSS files</li>
+<li>Setting variables are done by prepending &quot;--&quot; to a variable name</li>
+<li>Ex.
+<code>
+:root {
+--primary-color: yello;
+}
+</code></li>
+<li>Can access variable using &quot;url()&quot;</li>
+<li>Limited in that the variable value can only be valid CSS value</li>
+</ul>
+
+<h3 id='creating-variables-inside-elements'>Creating variables inside elements</h3>
+
+<ul>
+<li>Variables can be defined within any element</li>
+<li>Ex.
+```
+:root {
+--default-color: red;
+}</li>
+</ul>
+
+<p>body {
+  --default-color: red;
+}</p>
+
+<p>main {
+  --default-color: red;
+}</p>
+
+<p>p {
+  --default-color: red;
+}</p>
+
+<p>span {
+  --default-color: red;
+}</p>
+
+<p>a:hover {
+  --default-color: red;
+}
+```
+* Depending on where it was defined, the scope of the variable changes</p>
+
+<h3 id='variables-scope'>Variables scope</h3>
+
+<ul>
+<li>The scope of a variable is avaiable to that selector and to all of the children of that selector</li>
+<li>Ex.
+<code>
+.class {
+--variable: value;
+}
+</code></li>
+<li>The variable is available to all of its children</li>
+<li>Can set variables in the &quot;:root&quot; selector which is the root of the DOM elements
+
+<ul>
+<li>Means the variable will be available to every element in the page</li>
+</ul></li>
+<li>Variables can also be reassigned</li>
+<li>CSS variables are also case sensitive</li>
+</ul>
+
+<h3 id='fallback-values-for-var'>Fallback values for var()</h3>
+
+<ul>
+<li>Fallback values for var() can be set by adding a second parameter to the function</li>
+<li>Ex.
+<code>
+.class {
+margin: var(--variable, 30px);
+}
+</code></li>
+</ul>
+
+<h1 id='html-and-css-exercises'>HTML and CSS Exercises</h1>
+
+<!-- TOC -->
+
+<ul>
+<li><a href="#html-and-css-exercises">HTML and CSS Exercises</a>
+
+<ul>
+<li><a href="#blog-markup-with-css-thoughts">Blog Markup with CSS Thoughts</a></li>
+<li><a href="#formatting-text">Formatting Text</a></li>
+<li><a href="#tables">Tables</a></li>
+<li><a href="#example-form">Example Form</a></li>
+</ul></li>
+</ul>
+
+<!-- /TOC -->
+
+<h2 id='blog-markup-with-css-thoughts'>Blog Markup with CSS Thoughts</h2>
+
+<ul>
+<li>For styling how nav bars look and things like adding &quot;|&quot; in between nav items, CSS is often a better choice
+
+<ul>
+<li>Utilize selectors such as &quot;:last-child&quot; or &quot;::after&quot; to add content or change colors</li>
+</ul></li>
+</ul>
+
+<h2 id='formatting-text'>Formatting Text</h2>
+
+<ul>
+<li>Formatting text to have &quot;bold&quot; or &quot;italic&quot; is much easier when you use the <code>&lt;span&gt;</code> element inside the div that holds the content
+
+<ul>
+<li>Since <code>&lt;span&gt;</code> is inline, there is no difference in the visual content, but it becomes easier to select in CSS</li>
+</ul></li>
+</ul>
+
+<h2 id='tables'>Tables</h2>
+
+<ul>
+<li>Default tables are ugly, it can help to use CSS selectors to add borders as well as add padding / spacing within the cells</li>
+</ul>
+
+<h2 id='example-form'>Example Form</h2>
+
+<ul>
+<li>When trying to make an element larger the better way than setting the width and height largers is to adding <strong>padding</strong> in all 4 directions.</li>
+<li>Ex.</li>
+</ul>
+
+<form action="/test" method="POST">
+      <p>
+        <label>Name</label>
+        <input name="name" required />
+      </p>
+      <p>
+        <label>Email Address</label>
+        <input name="email" type="email" required />
+      </p>
+      <p>
+        <label>Blog URL</label>
+        <input type="url" required placeholder="www.example.com" />
+      </p>
+      <p>
+        <label>Notes</label>
+        <textarea rows="3" placeholder="Anything you want to tell us!"></textarea>
+      </p>
+      <p>
+        <button type="submit">Save!</button>
+      </p>
+</form>
+
+<style>
+    body {
+        font-family: system-ui;
+    }
+
+    form {
+        width: 50%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input, textarea {
+        width: 300px;
+        padding: 10px;
+    }
+
+    button {
+        background-color: green;
+        border: none;
+        color: white;
+        padding: 10px 30px;
+        border-radius: 4px;
+        cursor: pointer;
+        -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.45);
+                box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.45);
+    }
+</style>
+
+<h1 id='tailwind-css-and-frameworks'>TailWind CSS and Frameworks</h1>
+
+<!-- TOC -->
+
+<ul>
+<li><a href="#tailwind-css-and-frameworks">TailWind CSS and Frameworks</a>
+
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#tailwind-first-time">Tailwind First Time</a></li>
+<li><a href="#tailwind-margin--padding-cheatsheet">Tailwind Margin / Padding Cheatsheet</a></li>
+<li><a href="#tailwind-width-cheatsheet">Tailwind Width Cheatsheet</a></li>
+<li><a href="#tailwind-fonts-cheatsheet">Tailwind Fonts Cheatsheet</a></li>
+<li><a href="#tailwind-colors-cheatsheet">Tailwind Colors Cheatsheet</a></li>
+</ul></li>
+</ul>
+
+<!-- /TOC -->
+
+<h2 id='introduction'>Introduction</h2>
+
+<ul>
+<li>There are many frameworks that exist for CSS 
+
+<ul>
+<li>Bootstrap</li>
+<li>Tailwind</li>
+</ul></li>
+<li>Tailwind ties each HTML class to one CSS instruction
+
+<ul>
+<li>To style elements you specify the HTML class rather than writing the CSS by hand</li>
+</ul></li>
+<li>Leads to a lot of HTML classes, but tradeoff is don&#39;t have to write CSS</li>
+</ul>
+
+<h2 id='tailwind-first-time'>Tailwind First Time</h2>
+
+<ul>
+<li>Ex. Using the <code>&lt;link href=&quot;https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css&quot; rel=&quot;stylesheet&quot;&gt;</code> to get the Tailwind CSS framework
+<head>
+<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+</head></li>
+</ul>
+
+<p><body>
+  <form action='/test' method='POST' class="mx-auto text-center mt-10 w-1/2">
+    <p>
+      <label class="block mb-3">Name</label>
+      <input class="w-full border border-gray-400 border-solid p-2 mb-3" name='name' required />
+    </p>
+
+<p><p>
+      <label class="block mb-3">Email address</label>
+      <input class="w-full border border-gray-400 border-solid p-2 mb-3" type='email' name='email' required />
+    </p>
+    <p>
+      <label class="block mb-3">Blog URL</label>
+      <input class="w-full border border-gray-400 border-solid p-2 mb-3" type='url' required placeholder='https://www.example.com' />
+    </p>
+    <p>
+      <label class="block mb-3">Notes</label>
+      <textarea class="border border-gray-400 p-3 w-full" rows='3' placeholder='Anything you want to tell us!'></textarea>
+    </p>
+    <p>
+      <button type='submit' class="mt-5 p-3 pr-5 pl-5 bg-green-500 text-white rounded-lg">Save</button>
+    </p>
+  </form>
+</body></p></p>
+
+<ul>
+<li>There is a <a href="https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss">Tailwind CSS Intellisense</a> plugin for VS Code </li>
+</ul>
+
+<h2 id='tailwind-margin-padding-cheatsheet'>Tailwind Margin / Padding Cheatsheet</h2>
+
+<ul>
+<li><a href="https://thejsbootcamp.com/fWpWQfJ6UAMRiAXAvbB9/12-tailwind/03/">Link to cheatsheet</a></li>
+</ul>
+
+<h2 id='tailwind-width-cheatsheet'>Tailwind Width Cheatsheet</h2>
+
+<ul>
+<li><a href="https://thejsbootcamp.com/fWpWQfJ6UAMRiAXAvbB9/12-tailwind/04/">Link to cheatsheet</a></li>
+</ul>
+
+<h2 id='tailwind-fonts-cheatsheet'>Tailwind Fonts Cheatsheet</h2>
+
+<ul>
+<li><a href="https://thejsbootcamp.com/fWpWQfJ6UAMRiAXAvbB9/12-tailwind/05/">Link to cheatsheet</a></li>
+</ul>
+
+<h2 id='tailwind-colors-cheatsheet'>Tailwind Colors Cheatsheet</h2>
+
+<ul>
+<li><a href="https://thejsbootcamp.com/fWpWQfJ6UAMRiAXAvbB9/12-tailwind/06/">Link to cheatsheet</a></li>
+</ul>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="javascript">javascript</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>

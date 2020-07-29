@@ -1,0 +1,525 @@
+<h1 id='css-basics'>CSS Basics</h1>
+<ul>
+<li><a href="#css-basics">CSS Basics</a>
+
+<ul>
+<li><a href="#introduction-to-css">Introduction to CSS</a></li>
+<li><a href="#adding-css-to-html-page">Adding CSS to HTML page</a></li>
+<li><a href="#selectors">Selectors</a>
+
+<ul>
+<li><a href="#basic-selectors">Basic Selectors</a></li>
+<li><a href="#combining-selectors">Combining Selectors</a></li>
+<li><a href="#grouping-selectors">Grouping Selectors</a></li>
+<li><a href="#selectors-by-following-document-tree-structure">Selectors by following Document Tree Structure</a></li>
+</ul></li>
+<li><a href="#cascade">Cascade</a></li>
+<li><a href="#specificity">Specificity</a>
+
+<ul>
+<li><a href="#specificity-calculation">Specificity Calculation</a></li>
+</ul></li>
+<li><a href="#inheritance">Inheritance</a></li>
+<li><a href="#attribute-selectors">Attribute Selectors</a></li>
+<li><a href="#pseudo-classes">Pseudo Classes</a></li>
+<li><a href="#pseudo-elements">Pseudo Elements</a></li>
+<li><a href="#colors">Colors</a></li>
+<li><a href="#units">Units</a>
+
+<ul>
+<li><a href="#pixels">Pixels</a></li>
+<li><a href="#percentages">Percentages</a></li>
+<li><a href="#relative-units">Relative Units</a></li>
+<li><a href="#viewport-units">Viewport Units</a></li>
+<li><a href="#fraction-units">Fraction Units</a></li>
+</ul></li>
+<li><a href="#url">URL()</a></li>
+<li><a href="#calc">Calc()</a></li>
+<li><a href="#backgrounds">Backgrounds</a></li>
+<li><a href="#comments">Comments</a></li>
+</ul></li>
+</ul>
+<h2 id='introduction-to-css'>Introduction to CSS</h2>
+<ul>
+<li>CSS is used to style an HTML page and the corresponding elements</li>
+<li>CSS file has 2 parts:
+
+<ol>
+<li>Selector</li>
+<li>Declaration Block</li>
+</ol></li>
+<li>Declarations are made in property / value pairs where the property selects the type and the value changes the value</li>
+<li>A CSS rule set has a selector part and a declaration
+
+<ul>
+<li>Ex.
+<code>
+p {
+font-size: 20px;
+}
+</code></li>
+</ul></li>
+<li>Can select more than one tag at a time</li>
+<li><p>For classes use &quot;.&quot; before name</p>
+
+<ul>
+<li>Ex.
+```
+.my-class {</li>
+</ul>
+
+<p>}
+```</p></li>
+<li><p>For Id us &quot;#&quot; before name</p>
+
+<ul>
+<li>Ex.
+```
+#my-id {</li>
+</ul>
+
+<p>}
+```</p></li>
+</ul>
+<h2 id='adding-css-to-html-page'>Adding CSS to HTML page</h2>
+<ul>
+<li>CSS can be added to an HTML page in 3 ways:
+
+<ol>
+<li>Using the <code>&lt;link&gt;</code> tag
+
+<ul>
+<li>Adds an external CSS file rules to the HTML page</li>
+<li>Ex.
+<code>
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;myfile.css&quot;&gt;
+</code></li>
+</ul></li>
+<li>Using the <code>&lt;style&gt;</code> tag
+
+<ul>
+<li>Allow for adding some custom CSS tags to an HTML file</li>
+<li>Ex.
+<code>
+&lt;style&gt;
+    CSS Rules
+&lt;/style&gt;
+</code></li>
+</ul></li>
+<li>Inline styles
+
+<ul>
+<li>Can add specific inline styling to specific HTML elements</li>
+<li>Ex.
+<code>
+&lt;div style=&quot;background-color: yellow&quot;&gt;...&lt;/div&gt;
+</code></li>
+</ul></li>
+</ol></li>
+</ul>
+<h2 id='selectors'>Selectors</h2>
+<ul>
+<li>Selectors is the idea of selecting elements in the HTML tree to target for the CSS declaration rules</li>
+<li>Selectors can range from very basic to very specific</li>
+</ul>
+<h3 id='basic-selectors'>Basic Selectors</h3>
+<ul>
+<li>Basic selectors entail selecting a single HTML element either by tag, class name, or id</li>
+<li>Ex. To target <code>&lt;p&gt;</code> elements,
+<code>
+p {
+font-size: 20px;
+}
+</code></li>
+<li>The same works for classes and Id</li>
+<li>Class
+<code>
+.class-name {
+rules...
+}
+</code></li>
+<li>Ids
+<code>
+#id-name {
+rules...
+}
+</code></li>
+</ul>
+<h3 id='combining-selectors'>Combining Selectors</h3>
+<ul>
+<li>Can target an element by class-name or id</li>
+<li><p>Ex.
+<code>
+    &lt;p class=&quot;dog-name&gt;
+        Roger
+    &lt;/p&gt;
+    ...
+    p.dog-name {
+        rules...
+    }
+</code></p></li>
+<li><p>For targetting multiple classes, combine the class-names in the selector without spaces</p></li>
+<li><p>Ex.
+<code>
+.dog-name.roger {
+rules...
+}
+</code></p></li>
+</ul>
+<h3 id='grouping-selectors'>Grouping Selectors</h3>
+<ul>
+<li>Can combine selectors so that the rules apply to multiple elements by having a comma in between</li>
+<li>Ex.
+<code>
+p, .dog-name {
+color: yellow;
+}
+</code></li>
+</ul>
+<h3 id='selectors-by-following-document-tree-structure'>Selectors by following Document Tree Structure</h3>
+<ul>
+<li>Use spaces in between to target children of a targeted element</li>
+<li>Ex.
+<code>
+p span {
+color: yellow;
+}
+</code></li>
+<li>This targets span elements that are children of p elements</li>
+</ul>
+<h2 id='cascade'>Cascade</h2>
+<ul>
+<li>Cascading is an important topic within the realm of CSS in styling HTML pages</li>
+<li>There is a certain order and priority that gets applied for rules because sometimes there can be conflicting rules</li>
+<li>What it considers in the algorithm to figure the cascading are:
+
+<ul>
+<li>specificity</li>
+<li>importance</li>
+<li>inheritance</li>
+<li>order in the file</li>
+</ul></li>
+</ul>
+<h2 id='specificity'>Specificity</h2>
+<ul>
+<li>Specificity is determined by a system where the more specific rule will win
+
+<ul>
+<li>If two rules have the same specificity, the one that appears later in the file wins</li>
+</ul></li>
+</ul>
+<h3 id='specificity-calculation'>Specificity Calculation</h3>
+<ul>
+<li>Specificity is calculated by utilizing a 4 number system</li>
+<li>There are 4 slots and all of them starts at 0
+
+<ul>
+<li>0 0 0 0</li>
+<li>The slot at the leftmost is the most important and the rightmost is the least important</li>
+<li>Ex. 1 0 0 0 is higher specificity than 0 1 0 0</li>
+</ul></li>
+<li>Slot 1:
+
+<ul>
+<li>Slot 1 is incremented when there is an element selector</li>
+<li>Ex.
+<code>
+p {}                    /* 0 0 0 1 */
+span {}                 /* 0 0 0 1 */
+p span {}               /* 0 0 0 2 */
+p &gt; span {}             /* 0 0 0 2 */
+div p &gt; span {}         /* 0 0 0 3 */
+</code></li>
+</ul></li>
+<li>Slot 2:
+
+<ul>
+<li>Slot 2 is incremented by:
+
+<ol>
+<li>class selectors</li>
+<li>pseudo-class selectors</li>
+<li>attribute selectors</li>
+</ol></li>
+<li>Ex.
+<code>
+.name {}                /* 0 0 1 0 */
+.users .name {}         /* 0 0 2 0 */
+[href$=&#39;.pdf&#39;] {}       /* 0 0 1 0 */
+:hover {}               /* 0 0 1 0 */
+</code></li>
+</ul></li>
+<li>Slot 3:
+
+<ul>
+<li>Slot 3 is incremented by id selectors</li>
+<li>Ex.
+<code>
+#name {}                    /* 0 1 0 0 */
+.user #name {}              /* 0 1 1 0 */
+#name span {}               /* 0 1 0 1 */
+</code></li>
+</ul></li>
+<li><p>Slot 4:</p>
+
+<ul>
+<li>Slot 4 is incremented by inline styling</li>
+<li>Inline styling will have the most precedence over any rule </li>
+<li>Ex.
+<code>
+&lt;p style=&quot;color: red&quot;&gt;Test&lt;/p&gt; /* 1 0 0 0 */
+</code></li>
+</ul></li>
+<li><p>!important can be used to override any styling precedence</p></li>
+<li><p>Ex.
+<code>
+p {
+font-size: 20px!important;
+}
+</code></p></li>
+<li><p>By making this rule, this will take precendence over any CSS rule except for those that also have !important, which in that case will resolve using the specificity rules above</p></li>
+<li><p>Generally its better to not utilize id rules and !important as this can create issues if multiple CSS files are utilized in one HTML page</p></li>
+<li><p>Rather, more specific rules should be creating by combining selectors</p></li>
+<li><p>!important should only be utilized to see some kind of effect when testing</p></li>
+</ul>
+<h2 id='inheritance'>Inheritance</h2>
+<ul>
+<li>Some CSS properties inherit from parent to child without having to explicitly state the rule in the child while others don&#39;t</li>
+<li>For example, &quot;font-family&quot; gets inherited from the parent to child by default but &quot;background-color&quot; does not get inherited from parent to child</li>
+<li>To force properties to inherit, create a property rule in the parent and then have &quot;inherit&quot; as the value in the child</li>
+<li>Ex.
+<code>
+body {
+background-color: yellow;
+}
+p {
+background-color: inherit;
+}
+</code></li>
+<li>There are also methods to prevent inheriting in the children or reverting</li>
+</ul>
+<h2 id='attribute-selectors'>Attribute Selectors</h2>
+<ul>
+<li>There are also ways to specify selectors to target HTML elements by their attributes</li>
+<li>It is possible to target a certain element tag with a id attribute utilizing the &quot;[]&quot; syntax</li>
+<li>Ex.
+<code>
+p[id] {
+rules...
+}
+</code></li>
+<li>This will select all <code>&lt;p&gt;</code> elements that have an &quot;id&quot; attribute regardless of value</li>
+<li>Attribute selectors can also be matching to some regex pattern or exact</li>
+<li>Ex.
+<code>
+p[id=&quot;my-id] {
+rules...
+}
+</code></li>
+<li>In this case the CSS will only apply when the element is a <code>&lt;p&gt;</code> tag and the id attribute matches that string</li>
+</ul>
+<h2 id='pseudo-classes'>Pseudo Classes</h2>
+<ul>
+<li>Pseudo classes are predefined keywords that are used to select elements based on their state or to target a specific child</li>
+<li>One of the most popular ones that are used is &quot;:hover&quot;
+
+<ul>
+<li>This targets an element if it is hovered over</li>
+</ul></li>
+<li>Ex. When links are clicked, they switch state to &quot;:active&quot; and &quot;:visited&quot;
+<code>
+a,
+a:visited,
+a:active {
+color: yellow;
+}
+</code></li>
+<li>Can write the CSS selector utilizing pseudo-classes to make sure that the CSS stays regardless of the element&#39;s state</li>
+<li>:nth-child() is another option as it allows for targeting odd and even children
+
+<ul>
+<li>Often utilized to style lists such that the style is different for adjacent children</li>
+</ul></li>
+</ul>
+<h2 id='pseudo-elements'>Pseudo Elements</h2>
+<ul>
+<li>Used to style a specific part of an element</li>
+<li>Syntax starts with &quot;::&quot;</li>
+<li>The most common one are &quot;before&quot; and &quot;after&quot; which allow you to add content before or after an element
+
+<ul>
+<li>Most commonly used for adding things like icons</li>
+<li>Must specify the content property before inserting</li>
+</ul></li>
+<li>Ex.
+```
+p::before {
+content: url(/myimage.png);
+}</li>
+</ul>
+
+<p>.myElement::before {
+    content: &quot;Hey Hey!&quot;;
+}
+```</p>
+<h2 id='colors'>Colors</h2>
+<ul>
+<li>Colors can be added to HTML elements through:
+
+<ul>
+<li>color</li>
+<li>background-color</li>
+<li>border-color</li>
+</ul></li>
+<li>There are different ways to set colors:
+
+<ul>
+<li>Named colors - Something like &quot;blue&quot; that CSS has predefined to work when trying to set the color</li>
+<li>RGB / RGBA - allows you to pick the rgb and alpha value
+
+<ul>
+<li>These values go from 0 - 255</li>
+<li>Ex. rgb(0, 0, 0) will be black</li>
+<li>The rgba() allows you to add transparency through the last channel</li>
+</ul></li>
+<li>Hexadecimal Notation - in the form of &quot;#ffffff&quot; or &quot;#fff&quot; 
+
+<ul>
+<li>Express the numbers in 3 two digit numbers which range from 0 - 15 (0 - f)</li>
+<li>Can also add two extra digits for the alpha channel at the end</li>
+</ul></li>
+<li>HSL / HSLA - For hue, saturation, and lightness
+
+<ul>
+<li>This is the same as RGB / RGBA but it is just in another format</li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id='units'>Units</h2>
+<ul>
+<li>Units are standardized definitions in CSS that allow to easily set lengths, paddings, margins, etc.</li>
+</ul>
+<h3 id='pixels'>Pixels</h3>
+<ul>
+<li>Pixels are the most widely utilized measurement unit</li>
+<li>It doesn&#39;t exactly correspond to 1 exact pixel because of the difference in retinas of devices, but allows for a easy, standardized measurement</li>
+<li>Ex.
+<code>
+p {
+margin-top: 20px;
+}
+</code></li>
+</ul>
+<h3 id='percentages'>Percentages</h3>
+<ul>
+<li>Percentages allow you to define properties based on the parent&#39;s value
+<code>
+.parent {
+width: 400px
+}
+.child {
+width: 50%; /* = 200px */
+}
+</code></li>
+</ul>
+<h3 id='relative-units'>Relative Units</h3>
+<ul>
+<li>Commonly used are relative units that are relative to a font-size</li>
+<li>&quot;em&quot; is the value assigned to that element&#39;s font-size</li>
+<li>&quot;rem&quot; is the same as &quot;em&quot; but it measures the root element&#39;s font-size
+
+<ul>
+<li>Allows for consistency across the entire document</li>
+</ul></li>
+</ul>
+<h3 id='viewport-units'>Viewport Units</h3>
+<ul>
+<li>&quot;vw&quot; is the viewport width which takes a percentage of the viewport width
+
+<ul>
+<li>Ex. 50vw means 50% of the viewport width</li>
+</ul></li>
+<li>&quot;vh&quot; is the viewport height which takes a percentage of the viewport height</li>
+<li>&quot;vmin&quot; is the viewport minimum that represents the minimum between the height and width in terms of percentage
+
+<ul>
+<li>Ex. 30vmin is the 30% of the current width or height, whatever is smaller</li>
+</ul></li>
+<li>&quot;vmax&quot; is the same as &quot;vmin&quot; just maximum</li>
+<li>Viewport units are not inherited, meaning to set the height based on a viewport percentage, the parent&#39;s height does not need to be specified</li>
+</ul>
+<h3 id='fraction-units'>Fraction Units</h3>
+<ul>
+<li>&quot;fr&quot; are fraction units that are utilized in CSS Grids to divide space into fractions</li>
+</ul>
+<h2 id='url'>URL()</h2>
+<ul>
+<li>URLs are used to load resources such as images, gifs, mp4s, sound, etc.</li>
+<li>Ex.
+<code>
+div {
+background-image: url(test.png);
+}
+</code></li>
+<li>The url provided can be a relative URL, external absolute URL, or can find from the root of the domain of the CSS</li>
+</ul>
+<h2 id='calc'>Calc()</h2>
+<ul>
+<li>calc() function allows for performing basic math operations on values
+
+<ul>
+<li>Especially useful for adding or subtracting a length from a percentage</li>
+<li>Ex.
+<code>
+div {
+max-width: calc(80% - 100px)
+}
+</code></li>
+</ul></li>
+<li>Returns a &quot;length&quot; value so it can be used anywhere that expects a pixel value</li>
+<li>Ex.</li>
+</ul>
+
+<style>
+    .calc {
+        background-color: cyan;
+        width: calc(80% - 200px);
+    }
+</style>
+
+<p class="calc">
+    Width of element defined using the calc() function
+</p>
+<h2 id='backgrounds'>Backgrounds</h2>
+<ul>
+<li>Backgrounds of elements can be set with numerous properties</li>
+<li>Most popular are:
+
+<ul>
+<li>background-color</li>
+<li>background-image</li>
+<li>background-attachment</li>
+<li>background-size</li>
+<li>background-repeat</li>
+</ul></li>
+<li>Ex.</li>
+</ul>
+
+<style>
+    .background-example {
+        background: linear-gradient(#ffffff, #F3F333);
+        width: 100%;
+        height: 100px;
+    }
+</style>
+
+<p class="background-example">
+    Background example with linear gradient
+</p>
+<h2 id='comments'>Comments</h2>
+<ul>
+<li>For commenting in CSS, only block comments are allowed</li>
+<li>The syntax is <code>/*...*/</code></li>
+<li>Helps since this allowed you to comment out multiple lines until <code>*/</code> is reached</li>
+<li>CSS doesn&#39;t have inline comments so only block comments can be used</li>
+</ul>

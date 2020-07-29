@@ -1,0 +1,25 @@
+<h1 id='objects'>Objects</h1>
+<!-- TOC -->
+
+<ul>
+<li><a href="#objects">Objects</a>
+
+<ul>
+<li><a href="#intro-to-objects">Intro to Objects</a></li>
+</ul></li>
+</ul>
+
+<!-- /TOC -->
+<h2 id='intro-to-objects'>Intro to Objects</h2>
+<ul>
+<li>In JS any value that is not a primitive type is an object</li>
+<li>Can initialize an object as a &quot;class&quot; by having the &quot;new&quot; keyword before the function call
+
+<ul>
+<li>Ex.
+<code>
+const myCar = new Car(params)
+</code></li>
+</ul></li>
+<li>Objects are always passed by reference</li>
+</ul>

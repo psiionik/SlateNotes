@@ -1,0 +1,76 @@
+<h1 id='functions'>Functions</h1>
+<!-- TOC -->
+
+<ul>
+<li><a href="#functions">Functions</a>
+
+<ul>
+<li><a href="#functions-1">Functions</a></li>
+<li><a href="#arrow-functions">Arrow Functions</a></li>
+<li><a href="#nested-functions">Nested Functions</a></li>
+<li><a href="#recursive-functions">Recursive Functions</a></li>
+</ul></li>
+</ul>
+
+<!-- /TOC -->
+<h2 id='functions-2'>Functions</h2>
+<ul>
+<li>Functions in Javascript are a self-contined, block of code designed to be reused</li>
+<li>Functions can have any number of parameters and the parameters can be of any type</li>
+<li>Functions can return any value or for multiple values, use arrays or objects
+
+<ul>
+<li>Functions can also return other functions</li>
+</ul></li>
+</ul>
+<h2 id='arrow-functions'>Arrow Functions</h2>
+<ul>
+<li>Arrow functions are another way to declare functions
+
+<ul>
+<li>Anonymous so they must be set to a variable</li>
+</ul></li>
+<li>Ex.
+```
+let something = () {</li>
+</ul>
+
+<p>}
+```
+* Arrow functions allow for shorter syntax
+    * Can have implicit return when only having one line and omitting curly braces
+    * Don&#39;t need parenthesis if there is only one parameter being passed
+* Arrow functions are useful because it bind the &quot;this&quot; keyboard for the object in that object&#39;s scope</p>
+<h2 id='nested-functions'>Nested Functions</h2>
+<ul>
+<li>You can nest functions within the scope of another function
+
+<ul>
+<li>Useful because it modularizes the code (if inner function is only useful to that outer function)</li>
+<li>Also, allows you to reuse names without having to worry about overwriting</li>
+</ul></li>
+<li>The nested function is within the outer function&#39;s scope
+
+<ul>
+<li>Means it can only be called within the outer function, can&#39;t be called outside the outer function</li>
+</ul></li>
+<li>Can call a funciton before the definition due to something called <a href="https://www.i-programmer.info/programming/javascript/5364-javascript-hoisting-explained.html">Hoisting</a></li>
+</ul>
+<h2 id='recursive-functions'>Recursive Functions</h2>
+<ul>
+<li>Recursive functions are when a function invokes itself within its block of statements</li>
+<li>Recursion is very useful because it unlocks being able to utilize techniques such as divide and conquer, graph traversal, and new approaches to solve problems</li>
+<li><p>Ex. Factorial recursively
+```
+function factorial(n) {
+if (n == 1){
+    return 1
+}</p>
+
+<p>return n * factorial(n-1)
+}
+```</p></li>
+<li><p>In recursion the program stores each function call&#39;s information and context on the call stack</p></li>
+<li><p>When the base case is reached and something returns, the returned value goes to the previous function call&#39;s context and that previous function call resumes execution where it left off</p></li>
+<li><p>If the recursion doesn&#39;t end, the function calls will fill up the call stack and the maximum size is reached</p></li>
+</ul>
