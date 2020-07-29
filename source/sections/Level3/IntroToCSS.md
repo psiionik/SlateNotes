@@ -1,7 +1,5 @@
 # CSS Basics
 
-<!-- TOC -->
-
 - [CSS Basics](#css-basics)
     - [Introduction to CSS](#introduction-to-css)
     - [Adding CSS to HTML page](#adding-css-to-html-page)
@@ -28,8 +26,6 @@
     - [Calc()](#calc)
     - [Backgrounds](#backgrounds)
     - [Comments](#comments)
-
-<!-- /TOC -->
 
 ## Introduction to CSS
 
