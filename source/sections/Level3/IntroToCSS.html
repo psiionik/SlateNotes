@@ -538,8 +538,21 @@ a:active {
 <ul>
 <li data-line="423" class="code-line">For commenting in CSS, only block comments are allowed</li>
 <li data-line="424" class="code-line">The syntax is <code>/*...*/</code></li>
-<li data-line="425" class="code-line">Helps since this allowed you to comment out multiple lines until <code>*/</code> is reached</li>
-<li data-line="426" class="code-line">CSS doesn't have inline comments so only block comments can be used</li>
+<li data-line="425" class="code-line">Ex.</li>
+</ul>
+<pre><code data-line="426" class="code-line"><code><div>#name { display: block; } /* Nice rule! */
+
+/* #name { display: block; } */
+
+#name {
+	display: block; /*
+	color: red;
+	*/
+}
+</div></code></code></pre>
+<ul>
+<li data-line="437" class="code-line">Helps since this allowed you to comment out multiple lines until <code>*/</code> is reached</li>
+<li data-line="438" class="code-line">CSS doesn't have inline comments so only block comments can be used</li>
 </ul>
 
 </body></html>

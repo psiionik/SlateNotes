@@ -423,5 +423,17 @@ div {
 
 * For commenting in CSS, only block comments are allowed
 * The syntax is ```/*...*/```
+* Ex.
+```
+#name { display: block; } /* Nice rule! */
+
+/* #name { display: block; } */
+
+#name {
+	display: block; /*
+	color: red;
+	*/
+}
+```
 * Helps since this allowed you to comment out multiple lines until ```*/``` is reached
 * CSS doesn't have inline comments so only block comments can be used
